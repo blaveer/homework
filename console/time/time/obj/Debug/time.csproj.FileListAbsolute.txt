@@ -1,0 +1,7 @@
+E:\vs date\C#\homework\0907\console\time\time\bin\Debug\time.exe.config
+E:\vs date\C#\homework\0907\console\time\time\bin\Debug\time.exe
+E:\vs date\C#\homework\0907\console\time\time\bin\Debug\time.pdb
+E:\vs date\C#\homework\0907\console\time\time\obj\Debug\time.csprojResolveAssemblyReference.cache
+E:\vs date\C#\homework\0907\console\time\time\obj\Debug\time.csproj.CoreCompileInputs.cache
+E:\vs date\C#\homework\0907\console\time\time\obj\Debug\time.exe
+E:\vs date\C#\homework\0907\console\time\time\obj\Debug\time.pdb
