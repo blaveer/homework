@@ -1,0 +1,7 @@
+E:\vs date\C#\homework\0921(第三次作业)\plant\plant\bin\Debug\plant.exe.config
+E:\vs date\C#\homework\0921(第三次作业)\plant\plant\bin\Debug\plant.exe
+E:\vs date\C#\homework\0921(第三次作业)\plant\plant\bin\Debug\plant.pdb
+E:\vs date\C#\homework\0921(第三次作业)\plant\plant\obj\Debug\plant.csprojResolveAssemblyReference.cache
+E:\vs date\C#\homework\0921(第三次作业)\plant\plant\obj\Debug\plant.csproj.CoreCompileInputs.cache
+E:\vs date\C#\homework\0921(第三次作业)\plant\plant\obj\Debug\plant.exe
+E:\vs date\C#\homework\0921(第三次作业)\plant\plant\obj\Debug\plant.pdb
