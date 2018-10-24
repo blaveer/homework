@@ -7,3 +7,12 @@ E:\vs date\C#\homework\0907\window\time\time\obj\Debug\time.csproj.GenerateResou
 E:\vs date\C#\homework\0907\window\time\time\obj\Debug\time.csproj.CoreCompileInputs.cache
 E:\vs date\C#\homework\0907\window\time\time\obj\Debug\time.exe
 E:\vs date\C#\homework\0907\window\time\time\obj\Debug\time.pdb
+E:\vs date\C#\homework\submit\window\time\time\bin\Debug\time.exe.config
+E:\vs date\C#\homework\submit\window\time\time\bin\Debug\time.exe
+E:\vs date\C#\homework\submit\window\time\time\bin\Debug\time.pdb
+E:\vs date\C#\homework\submit\window\time\time\obj\Debug\time.csprojResolveAssemblyReference.cache
+E:\vs date\C#\homework\submit\window\time\time\obj\Debug\time.Properties.Resources.resources
+E:\vs date\C#\homework\submit\window\time\time\obj\Debug\time.csproj.GenerateResource.cache
+E:\vs date\C#\homework\submit\window\time\time\obj\Debug\time.csproj.CoreCompileInputs.cache
+E:\vs date\C#\homework\submit\window\time\time\obj\Debug\time.exe
+E:\vs date\C#\homework\submit\window\time\time\obj\Debug\time.pdb

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfOrderDetatils xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OrderDetatils>
+    <OrderNumber>10</OrderNumber>
+    <OrderQuantity>11100</OrderQuantity>
+    <ProductName>X0PP0N</ProductName>
+    <Client>DDFPV4</Client>
+  </OrderDetatils>
+</ArrayOfOrderDetatils>

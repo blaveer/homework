@@ -1,0 +1,7 @@
+E:\vs date\C#\homework\1019第六次作业\OrderService\OrderService\OrderService\bin\Debug\OrderService.exe.config
+E:\vs date\C#\homework\1019第六次作业\OrderService\OrderService\OrderService\bin\Debug\OrderService.exe
+E:\vs date\C#\homework\1019第六次作业\OrderService\OrderService\OrderService\bin\Debug\OrderService.pdb
+E:\vs date\C#\homework\1019第六次作业\OrderService\OrderService\OrderService\obj\Debug\OrderService.csprojResolveAssemblyReference.cache
+E:\vs date\C#\homework\1019第六次作业\OrderService\OrderService\OrderService\obj\Debug\OrderService.csproj.CoreCompileInputs.cache
+E:\vs date\C#\homework\1019第六次作业\OrderService\OrderService\OrderService\obj\Debug\OrderService.exe
+E:\vs date\C#\homework\1019第六次作业\OrderService\OrderService\OrderService\obj\Debug\OrderService.pdb
