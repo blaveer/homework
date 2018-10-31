@@ -1,0 +1,14 @@
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\bin\Debug\OrderService.exe.config
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\bin\Debug\OrderService.exe
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\bin\Debug\OrderService.pdb
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.csprojResolveAssemblyReference.cache
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.Form1.resources
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.Properties.Resources.resources
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.csproj.GenerateResource.cache
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.csproj.CoreCompileInputs.cache
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.exe
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.pdb
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.SeeOrder.resources
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.NewOrder.resources
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.Search.resources
+E:\vs date\C#\homework\1026第七次作业\OrderService\OrderService\obj\Debug\OrderService.Inquire.resources
