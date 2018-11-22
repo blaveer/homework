@@ -1,0 +1,742 @@
+﻿<html>
+	<head>
+		<title>《Java程序设计》教学进度安排</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<meta content="Microsoft FrontPage 4.0" name="GENERATOR">
+		<meta content="FrontPage.Editor.Document" name="ProgId">
+		<base target="_blank">
+		<script src="jquery-1.4.2.min.js"></script>
+		<style></style>
+		<script>
+function fun(){
+	if( location.href.indexOf("cf.pku") >=0  ) return;
+	var w= window.open("about:blank","notice","HEIGHT=200,WIDTH=200" );
+	w.document.write("新的校内服务器开通了，请大家访问<a target=_blank onclick=close() href=http://cf.pku.cn/tds>cf.pku.cn/tds</a>");
+	//w.document.write("通知：12月26日的计算机课不讲课，同学们自学、复习。但本周照常上机。请同学们互相转告。");
+}
+
+
+var x = new Array();
+var i = 0;
+
+
+function whichweek()
+{
+	var now = new Date();
+	//now = new Date("2003/12/24")
+	for( i=0; i<x.length-1; i++ )
+		if( now>=x[i] && now<x[i+1]) return i;
+	return 0;
+}
+
+function scrol(lnk){
+	var w = whichweek();
+	if( w>0 ) w--; // make it a little up
+	lnk.href="#w" + w;
+	return false;
+}
+
+function openlink(lnk, w)
+{
+	if( w <= whichweek() )return true; 
+	lnk.href="#";
+	alert("Sorry,文件暂时无法打开。因为只能打开本周的媒体文件。")
+	return false;
+}
+
+function wk(){
+	var now = new Date();
+	//alert(now);
+	var first = new Date(2013,1,25); //注意月份
+	//alert(first);
+	return parseInt((now-first)/24/3600/1000/7);	
+}
+
+$(function(){
+
+	var w = wk();
+	var a=$("a");
+	a.each(function(){ 
+		var name=$(this).attr("name");
+		
+		if(name.substring(0,1)!="w") return;
+		
+		var idx = parseInt(name.substring(1));
+		//alert(idx);
+		if( idx!=w+1) return;
+		
+		var td = $(this).parent().next().next().next();
+		//alert(td.html());
+		//alert(tr.html());//filter("td:first-child")
+		//td.css("class","nodisplay");
+		td.parent().css("background-color","#ffddee");
+		
+		//td.html("&nbsp;");
+	});
+
+});
+		</script>
+	</head>
+	<body bgColor="white" onload="">
+		<center><a name="w0"></a>
+			<p><br>
+				<b>《Java程序设计》教学进度安排</b>
+			</p>
+			<!--<p>&nbsp;有关课件:<a href="http://cf.pku.cn/Courseware/VB/index.htm"><FONT color="#ff0066"><STRONG>Visual 
+							Basic课件</STRONG></FONT></a><FONT color="#ff0066"><STRONG>, </STRONG></FONT>
+				<a href="http://cf.pku.cn/courseware/net/WebPage/ASP_1.htm"><FONT color="#ff0066"><STRONG>ASP课件</STRONG></FONT></a>
+			-->
+			<p><font size="-1"><font color="red">注意：随时都在维护中，请注意最新的变化。</font><BR>
+					如果本站点<b><A href="http://cf.pku.cn/tds">http://cf.pku.cn/tds</A></b>不通，请试试备份站点：<b><A href="http://www.dstang.com/java">http://www.dstang.com/java</A></b>
+					<p><font size="-1"><b>教材<br>《Java程序设计》唐大仕 </b>北方交通大学出版社 清华大学出版社
+						</font>
+						<BR><br>
+						<b>参考书</b>
+<br>《Java学习笔记》林信良，清华大学出版社(564页)
+<br>《疯狂Java讲义》李刚 ，电子工业出版社(887页)
+<br>Java大学教程(Java How to Program) (英文影印版或翻译版) ,Deitel,电子工业出版社(758页)
+<br>Java, Java, Java, Object-Oriented Problem Solving, R. Morelli and R.Walde, Prentice Hall(850页,<a href="ref/Java-Language-Specification-3rd-Edition.rar">公开电子版</a>)
+<br>Java程序设计教程(英文影印版) , John Lewis,电子工业出版社
+<br>Java编程思想(Thinking in Java) (英文影印版或翻译版) ,Bruce Eckel,机械工业出版社(1482页)
+
+						<br><br><FONT size="-1">主讲教师：唐大仕 <A href="mailto:dstang2000@263.net">dstang2000@263.net</A></FONT><!--&nbsp; QQ:351116463-->
+						<BR>
+					<p><font size="-1">辅导教师： 
+							
+							<br>
+							谢水源 <A href="mailto:xsy2510@gmail.com">xsy2510@gmail.com</A> ftp://cf3:cf3@cf.pku.cn
+							<br>
+							黄婷 <A href="mailto:bettyting2010@163.com">bettyting2010@163.com</A> ftp://cf4:cf4@cf.pku.cn
+							<br>
+							张锐  <A href="mailto:zhangrui12@sei.pku.edu.cn">zhangrui12@sei.pku.edu.cn</A> ftp://cf5:cf5@cf.pku.cn
+							<br>
+						</font>
+					<p><a href="fenban.xls">分班及机位</a> &nbsp;&nbsp; &nbsp;
+					<!--A href="HomeworkSubmit.htm">作业提交方法</A-->&nbsp;&nbsp; &nbsp;
+					作业改用北大的教学网了(http://course.pku.edu.cn)
+					<font color="red">作业提交情况:</font> <A href="../zj/zj3/homework.htm">cf3班</A>&nbsp;&nbsp;
+						<A href="../zj/zj4/homework.htm">cf4班</A>&nbsp;&nbsp; <A href="../zj/zj5/homework.htm">
+							cf5班</A> 
+							
+					<P>
+					</P>
+					<p>
+						<table style="FONT-SIZE: 10pt; BORDER-COLLAPSE: collapse" width="100%" border="1" id=tbContent>
+							<tr>
+								<td width="22">
+									<P align="center">周次
+									</P>
+								</td>
+								<td width="37">日期
+								</td>
+								<td width="248">
+									<P align="center">&nbsp;讲课内容
+									</P>
+								</td>
+								<TD width="218">
+									重要概念
+								</TD>
+								<td width="177">
+									重点实习内容
+								</td>
+								<td width="159">
+									<P align="center">讲义下载、参考信息
+									</P>
+								</td>
+							</tr>
+							<tr>
+								<td width="22">1&nbsp;<a name="w1"></a></td>
+								<td width="37">2.26
+								</td>
+								<td width="248">第1章 Java语言与面向对象的程序设计</td>
+								<TD width="218"><pre>
+1.1	 Java语言简介
+1.1.1  Java 语言出现的背景、影响及应用前景
+1.1.2  Java 的特点
+1.1.3  Java和C、C++
+1.2  面向对象程序设计
+        1.2.1  面向对象概述
+        1.2.2  对象、类与实体
+        1.2.3  对象的状态与行为
+        1.2.4  对象的关系
+        1.2.5  面向对象的软件开发过程
+								</pre>
+								</TD>
+								<td width="177">
+								</td>
+								<td width="159"><A href="ppt/0.ppt">本次课的讲义0</A>
+								<br><A href="ppt/1.ppt">本次课的讲义1</A>&nbsp;
+								<br><a href="ref/JJJ_OOPS.rar">Java Language Specification</a>
+								<a href="ref/Java-Language-Specification-3rd-Edition.rar">Java, Java, Java, Object-Oriented Problem Solving电子版</a>
+								</td>
+							</tr>
+							<tr>
+								<td width="22">2&nbsp;<a name="w2"></a>
+								</td>
+								<td width="37">3.5
+								</td>
+								<td width="248">第2章 简单的Java程序
+								</td>
+								<TD width="218">
+									<pre>
+2.1	 Application与Applet程序
+2.1.1  Application程序
+2.1.2  Applet程序
+2.1.3  Java程序的基本构成
+2.2  程序的编辑、编译与运行
+2.2.1	Java工具包JDK
+2.2.2	Application的编辑、编译与运行
+2.2.3	Applet的编辑、编译与运行
+2.2.4	使用jar打包程序
+2.3  Java程序中的基本输入与输出
+2.3.1  字符界面的输入与输出
+2.3.2  Applet图形界面输入与输出
+2.3.3  Java Application图形界面输入与输出
+2.3.4  同时作为Application与Applet的程序
+2.4  Java集成开发环境
+2.4.1  几种辅助工具的使用
+2.4.2  几种集成工具的使用
+
+</pre>
+								</TD>
+								<td width="177">
+								</td>
+								<td width="159">
+									<br><A href="ppt/2.ppt">本次课的讲义</A>&nbsp;
+									<br><A href="example/ch02.rar">本次课的示例</A>&nbsp;
+
+								</td>
+							</tr>
+							<tr>
+								<td width="22">3&nbsp;<a name="w3"></a>
+								</td>
+								<td width="37">3.12
+								</td>
+								<td width="248">第3章 数据运算、流控制和数组
+								</td>
+								<TD width="218">
+									<pre>
+ 3.1  数据类型、变量与常量
+3.1.1  数据类型
+3.1.2  标识符
+3.1.3  常量
+3.1.4  变量
+3.1.5  程序的书写与注释
+      3.2  运算符与表达式
+3.2.1  算术运算符
+3.2.2  关系运算符
+3.2.3  逻辑运算符
+3.2.4  位运算符
+3.2.5	赋值与强制类型转换
+3.2.6	条件运算符
+3.2.7	表达式及运算的优先级、结合性
+3.3  流程控制语句
+3.3.1  结构化程序设计的三种基本流程
+3.3.2  简单语句
+3.3.3  分支语句
+3.3.4  循环语句
+3.3.5  跳转语句
+    3.4  数组
+      3.4.1  一维数组
+      3.4.2  多维数组
+      3.4.3  System.copyarray()方法
+</pre>
+								</TD>
+								<td width="177">
+									<a href="hw/hw3.docx">本次上机练习内容</a>
+								</td>
+								<td width="159">
+									<br><A href="ppt/3.ppt">本次课的讲义</A>&nbsp;
+									<br><A href="example/ch03.rar">本次课的示例</A>&nbsp;
+									<p></p>
+								</td>
+							</tr>
+							<tr>
+								<td width="22">4&nbsp;<a name="w4"></a>
+								</td>
+								<td width="37">3.19
+								</td>
+								<td width="248">第4章 类、包和接口
+								</td>
+								<TD width="218">
+									<pre>
+4.1	类、域、方法
+4.1.1  定义类中的域和方法
+4.1.2  构造方法与对象的创建
+4.1.3  使用对象
+4.1.4  方法的重载
+4.1.5  this的使用
+4.2  类的继承
+4.2.1  派生子类
+4.2.2  域的继承与隐藏、添加
+4.2.3  方法的继承、覆盖与添加
+4.2.4  super的使用
+4.2.5  父类对象与子类对象的转换
+4.3  包
+4.3.1  package语句
+4.3.2  import语句
+4.3.3  编译和运行包中的类
+4.3.4  CLASSPATH
+4.4  访问控制符
+4.4.1  成员的访问控制符
+4.4.2  类的访问控制符
+4.4.3  setor与getor
+4.4.4  构造方法的隐藏
+4.5	非访问控制符
+4.5.1  static
+4.5.2  final
+4.5.3  abstract
+4.5.4  其他修饰符
+4.5.5  一个应用模型--单子
+4.6  接口
+4.6.1  接口的概念
+4.6.2  定义接口
+4.6.3  实现接口
+4.6.4  对接口的引用
+</pre>
+								</TD>
+								<td width="177">
+									<A href="hw/hw4.docx">要提交的第2次作业</A>
+								</td>
+								<td width="159">
+									<ul>
+									<li><A href="ppt/4.ppt">本次课的讲义</A>&nbsp;
+									<li><A href="example/ch04.rar">本次课的示例</A>&nbsp;
+									<li><A href="ref/jls7.pdf">Java语言规范</A>&nbsp;
+									<li><A href="ref/JDK_API_1_6_zh_CN.CHM">JDK1.6中文文档</A>&nbsp;
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td width="22">5&nbsp;<a name="w5"></a>
+								</td>
+								<td width="37">3.26
+								</td>
+								<td width="248">第4章 类、包和接口
+									<p>&nbsp;</p>
+								</td>
+								<TD width="218">
+								</TD>
+								<td width="177">
+									<A href="hw/hw4-2.docx">要提交的第3次作业</A>
+								</td>
+								<td width="159">
+									<p>&nbsp;（同上）</p>
+								</td>
+							</tr>
+							<tr>
+								<td width="22">6&nbsp;<a name="w6"></a></td>
+								<td width="37">4.2</td>
+								<td width="248">第5章 深入理解Java语言</td>
+								<TD width="218">
+									<pre>
+5.1  变量及其传递
+5.1.1  基本类型变量与引用型变量
+5.1.2  域变量与局部变量
+5.1.3  变量的传递
+5.1.4  变量的返回
+    5.2  多态与虚方法调用
+5.2.1  上溯造型
+5.2.2  虚方法调用
+5.2.3  动态类型确定
+ 5.3  对象构造与初始化
+5.3.1  调用本类或父类的构造方法
+5.3.2  构造方法的执行过程
+5.3.3  构建方法内部调用的方法的多态性
+5.4  对象清除与垃圾回收
+5.4.1  对象的自动清除
+5.4.2  System.gc()方法
+5.4.3  finalize()方法
+5.5	 内部类与匿名类
+5.5.1  内部类
+5.5.2  方法中的内部类及匿名类
+</pre>
+								</TD>
+								<td width="177">
+									<A href="hw/testfiles.rar">要提交的第4次作业</A>
+								</td>
+								<td width="159">
+									<ul>
+									<li><A href="ppt/5.ppt">本次课的讲义</A>&nbsp;
+									<li><A href="example/ch05.rar">本次课的示例</A>&nbsp;
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<TD width="22">7&nbsp;<a name="w7"></a>
+								</TD>
+								<TD width="37">
+									<P>4.9</P>
+								</TD>
+								<td width="248">第5章 深入理解Java语言
+									<p>&nbsp;</p>
+								</td>
+								<TD width="218">
+								</TD>
+								<td width="177">
+									<A href="hw/hw5-2.doc">要提交的第5次作业</A>
+								</td>
+								<td width="159">
+									<p>&nbsp;</p>
+								</td>
+							</tr>
+							<TR>
+								<TD width="22">8<a name="w8"></a></TD>
+								<TD width="37">4.16</TD>
+								<TD width="248">
+									<P>第6章 异常处理</P>
+								</TD>
+								<TD width="218">
+									<pre>
+6.1  异常处理
+6.1.1  异常的概念
+6.1.2  捕获和处理异常
+6.1.3  应用举例
+6.2  创建用户自定义异常类
+6.2.1  自定义异常类
+6.2.2  应用举例
+6.3  断言及程序的测试
+6.3.1  使用assert
+6.3.2  程序的测试及JUnit
+</pre>
+								</TD>
+								<TD width="177">
+								</TD>
+								<TD width="159">
+									<ul>
+									<li><A href="ppt/5_2.ppt">第5章补充的讲义</A>&nbsp;
+									<li><A href="example/ch05_2.rar">第5章补充的示例</A>&nbsp;
+									<li><A href="ppt/6.ppt">本次课的讲义</A>&nbsp;
+									<li><A href="example/ch06.rar">本次课的示例</A>&nbsp;
+									</ul>
+								</TD>
+							</TR>
+							<TR>
+								<td width="22">&nbsp;<a name="w9"></a> &nbsp;9
+								</td>
+								<td width="37">&nbsp;4.23
+								</td>
+								<td width="248">第7章 工具类及常用算法
+								</td>
+								<TD width="218">
+									<pre>
+7.1  Java语言基础类
+7.1.1  Java基础类库
+7.1.2  Object类
+7.1.3  基本数据类型的包装类
+7.1.4  Math类
+7.1.5  System类
+7. 2  字符串
+7.2.1  String类
+7.2.2  StringBuffer类
+7.2.3  StringTokenizer类
+7.3  集合类
+7.3.1  集合与Collection API
+7.3.2  Set接口及HashSet类
+7.3.3  List接口及ArrayList，Vector类
+7.3.4  Iterator及Enumeration
+7.3.5  Map接口及Hashtable类
+7.4  向量、堆栈、队列
+7.4.1  Vector向量
+7.4.2  Stack堆栈
+7.4.3  LinkedList及队列
+7.5  排序与查找
+7.5.1  Arrays类
+7.5.2  Collections类
+7.5.3  冒泡排序
+7.5.4  选择排序
+7.5.5  快速排序
+7.6  遍试、迭代、递归及回溯
+7.6.1  遍试
+7.6.2  迭代
+7.6.3  递归
+7.6.4  回溯
+7.7  与集合类相关的Java新特性
+7.7.1  泛型
+7.7.2  增强的for语句
+7.7.3  装包与拆包
+</pre>
+								</TD>
+								<td width="177">
+									<A href="hw/hw7.docx">要提交的第6次作业</A>
+								</td>
+								<td width="159">
+									<ul>
+									<li><A href="ppt/7.ppt">本次课的讲义</A>&nbsp;
+									<li><A href="example/ch07.rar">本次课的示例</A>&nbsp;
+									</ul>
+								</td>
+							</TR>
+							<tr>
+								<td width="22">&nbsp;<a name="w11"></a> 11
+								</td>
+								<td width="37">
+									&nbsp;&nbsp;5.7
+								</td>
+								<td width="248">
+									<p>
+										第8章 多线程</p>
+								</td>
+								<TD width="218">
+									<pre>
+8.1  线程及其创建
+8.1.1  Java中的线程
+8.1.2  创建线程对象的两种方法
+8.1.3  多线程
+8.1.4  应用举例
+8.2  线程的调度
+8.2.1  线程的状态与生命周期
+8.2.2  线程调度与优先级
+8.2.3  对线程的基本控制
+8.2.4  一个实用的Timer类
+8.3	线程的同步与共享
+8.3.1  synchronized关键字
+8.3.2  线程间的同步控制
+</pre>
+								<td width="177">&nbsp;
+								</td>
+								<td width="159">
+									<ul>
+									<li><A href="ppt/8.ppt">本次课的讲义</A>&nbsp;
+									<li><A href="example/ch08.rar">本次课的示例</A>&nbsp;
+									</ul>
+								</td>
+								</TD>
+							</tr>
+							<tr>
+								<td width="22">&nbsp;<a name="w11"></a> 11
+								</td>
+								<td width="37">&nbsp;5.7
+								</td>
+								<td width="248">
+									<P></P>
+									<P>第9章 流、文件及基于文本的应用
+									</P>
+								</td>
+								<TD width="218">
+									<pre>
+9.1  流式输入与输出
+9.1.1  字节流与字符流
+9.1.2  节点流和处理流
+9.1.3  标准输入和标准输出
+9.1.4  应用举例
+9.2  文件及目录
+9.2.1  文件与目录管理
+9.2.2  文件输入与输出流
+9.2.3  RandomAccessFile类
+9. 3  基于文本的应用
+9.3.1  Java Application命令行参数
+9.3.2  环境参数
+9.3.3  处理Deprecated的API
+9.3.4  正则表达式
+</pre>
+								</TD>
+								<td width="177">
+									<A href="hw/hw8.docx">要提交的第7次作业</A>
+								</td>
+								<td width="159">
+									<ul>
+									<li><A href="ppt/9.ppt">本次课的讲义</A>&nbsp;
+									<li><A href="example/ch09.rar">本次课的示例</A>&nbsp;
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td width="22">12&nbsp;<a name="w12"></a>
+								</td>
+								<td width="37">5.14
+								</td>
+								<td width="248">第10章 图形用户界面
+								</td>
+								<TD width="218">
+									<pre>
+10.1  AWT组件
+10.1.1  图形用户界面概述
+10.1.2  AWT组件分类
+10.1.3  Component的方法
+10.2  布局管理
+10.2.1  FlowLayout
+10.2.2  BorderLayout
+10.2.3  CardLayout
+10.2.4  GridLayout
+10.2.5  GridBagLayout
+10.2.6  通过嵌套来设定复杂的布局
+10.3  事件处理
+10.3.1  事件及事件监听器
+10.3.2  事件监听器的注册
+10.3.3  事件适配器
+10.3.4  内部类及匿名类在事件处理中的应用
+10.4  常用组件的使用
+10.4.1  标签、按钮与动作事件
+10.4.2  文本框、文本区域与文本事件
+10.4.3  单、复选按钮，列表与选择事件
+10.4.4  调整事件与滚动条
+10.4.5  鼠标、键盘事件与画布
+10.4.6  Frame与窗口事件
+10.4.7  Panel与容器事件
+10.4.8  组件事件、焦点事件与对话框
+10.5  绘图、图形和动画
+10.5.1  绘制图形
+10.5.2  显示文字
+10.5.3  控制颜色
+10.5.4  显示图像
+10.5.5  实现动画效果
+10.6  Applet
+10.6.1  Applet的基本工作原理
+10.6.2  Applet类
+10.6.3  HTML文件参数传递
+10.6.4  Applet的局限
+10.7  SwingGUI组件
+10.7.1  Swing的特点
+10.7.2  几种Swing组件介绍
+10.8  基于GUI的应用程序
+10.8.1  使用可视化设计工具
+10.8.2  菜单的定义与使用
+10.8.3  菜单、工具条及对话框的应用
+</pre>
+								</TD>
+								<td width="177">
+								</td>
+								<td width="159">
+									<ul>
+									<li><A href="ppt/10.ppt">本次课的讲义</A>&nbsp;
+									<li><A href="example/ch10.rar">本次课的示例</A>&nbsp;
+									<li><A href="example/TextEditorApp2.rar">简单编辑器（加了分层、日志）</A>&nbsp;
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td width="22">13&nbsp;<a name="w13"></a>
+								</td>
+								<td width="37">5.21
+								</td>
+								<td width="248">
+									<P>第11章 网络、多媒体和数据库编程</P>
+								</td>
+								<TD width="218">
+									<pre>
+11.1  Java网络编程
+11.1.1  使用URL
+11.1.2  用Java实现底层网络通信
+11.1.3  实现多线程服务器程序
+11.1.4  Java的Email编程
+11.2  多媒体编程
+11.2.1  在Applet中获取声音与图像
+11.2.2  Java图像编程
+11.2.3  Java声音编程
+11.3  Java数据库编程
+11.3.1  Java访问数据库的基本步骤
+11.3.2  使用JTable显示数据表
+11.4  J2EE及J2ME简介
+11.4.1  J2EE简介
+11.4.2  J2ME简介
+</pre>
+								</TD>
+								<td width="177">
+								</td>
+								<td width="159">
+									<ul>
+									<li><A href="ppt/11.ppt">本次课的讲义</A>&nbsp;
+									<li><A href="example/ch11.rar">本次课的示例</A>&nbsp;
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td width="22">14&nbsp;<a name="w14"></a>
+								</td>
+								<td width="37">5.28&nbsp;
+								</td>
+								<td width="248">如何写好Java代码
+								</td>
+								<TD width="218">
+<pre>
+写好代码经验谈
+重构与设计模式
+反射、反编译与混淆
+</pre>
+								</TD>
+								<td width="177">
+									<p>
+										<A href="hw/javaBigHW.txt">期末大作业</A></p>
+								</td>
+								<td width="159">
+									<ul>
+									<li><A href="ppt/12.ppt">本次课的讲义</A>&nbsp;
+									<li><A href="example/ch12.rar">本次课的示例</A>&nbsp;
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td width="22" height="17">15&nbsp;<a name="w15"></a>
+								</td>
+								<td width="37" height="17">6.4
+								</td>
+								<td width="248" height="17">复习
+								</td>
+								<TD width="218" height="17"></TD>
+								<td width="177" height="17">
+								</td>
+								<td width="159" height="17">
+									<p><A href="ppt/review.ppt">复习的ppt</A></p>
+								</td>
+							</tr>
+							<!--TR>
+								<TD width="17">16</TD>
+								<TD width="37">6.16</TD>
+								<TD width="113">
+									(端午节,放假)
+								</TD>
+								<TD width="177"></TD>
+								<TD width="177"></TD>
+								<TD width="159"></TD>
+							</TR-->
+							<tr>
+								<td width="22"><a name="w18"></a>
+								</td>
+								<td width="37"></td>
+								<td width="248">考试时间：6月25日晚上18:30 地点 二教407
+								</td>
+								<TD>
+<br><font color=red>6月25日之前，请给唐老师发封email,谈谈你对这门课的建议与意见。 </font>邮件地址： dstang2000@263.net
+
+<br>6月24日 答疑 10：30-12:00 地点：理科一号楼1223 
+<br><font color=red>6月25日 18:30考试  地点：二教407</font>
+
+<br><font color=red>6月26日 提交代码及说明</font>（提交后还可小量修改，注意：多人合作的项目只用交一份，但要写明分工情况）
+
+<br><font color=red>6月28日 8:00-11:00 到机房讲解你的项目，大家交流学习</font>
+
+<br><font size=+2>请将修改完成的期末作业，压缩后发邮件给唐老师dstang2000@263.net （作业截止时间6月30日24：00）</font></TD>
+								<td width="177">
+								</td>
+								<td width="159">
+								</td>
+							</tr>
+							<tr>
+								<td width="22"></td>
+								<td width="37"></td>
+								<td width="248"></td>
+								<TD width="218"></TD>
+								<td width="177"></td>
+								<td width="159">
+								</td>
+							</tr>
+							<P></P>
+						</table>
+					<p><br>
+						附：下学期公选课<A href="../csharp/csharp_intro.htm">《C#程序设计及其应用》课程介绍</A>
+					</p>
+		</center>
+		</FONT> 
+		<!--div style="position:absolute; left:200px; top: 200px; background-color: yellow; width: 500px; height: 200px;" id=divNotice><table width=100% height=100%><tr><td align=left style="color:red">
+		通知：
+		<br>1. 从6月8日起计算中心机房有两周时间不能上机。
+		<br>2. 5月31日（星期一）安排一次答疑，
+		<br>&nbsp;&nbsp;时间下午2：00-5：00，地点：理科一号二层1223E。
+		<br>3. 网上复习资料可提前看。
+		<br>4. 选了部分优秀作业供大家互相学习。请见网上。
+		<br><br><button onclick="document.getElementById('divNotice').style.display='none'">我知道了</button>
+		</div-->
+		</FONT>
+	</body>
+</html>

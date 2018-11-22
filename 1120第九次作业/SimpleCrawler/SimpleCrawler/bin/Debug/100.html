@@ -1,0 +1,621 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>首页 - 班级博客 - 博客园</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="//common.cnblogs.com/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/bundles/site.overwrite.min.css?v=IUpCWbEsXpv_eiwr4Cd8IAOwObr56X6yGpJmUX6l-do" />
+    
+    <link rel="stylesheet" href="/bundles/site.square.min.css?v=BwzJCAC2-B5QvcGh7On7R84spnwn1bk_7R4HiyMbH4M" />
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/amazeui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.AMUI.progress.start();
+        });
+
+        $(window).load(function () {
+            $.AMUI.progress.done();
+        });
+    </script>
+</head>
+<body>
+    
+    <header class="am-topbar am-topbar-fixed-top">
+        <div class="am-container">
+            <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}">
+                <span class="am-sr-only">导航切换</span><span class="iconfont">&#xe61e;</span>
+            </button>
+            <div class="am-collapse am-topbar-collapse" id="collapse-head">
+                <ul class="am-nav am-nav-pills am-topbar-nav" id="navigation-bar">
+                    <li class="am-active"><a href="/">首页</a></li>
+                    <li class=""><a href="/campus">校区</a></li>
+                    <li class=""><a href="/schoolclass">班级</a></li>
+                    <li class=""><a href="/posts">博文</a></li>
+                    <li class=""><a href="/comment">评论</a></li>
+                    <li class=""><a href="/homework">作业</a></li>
+                </ul>
+                <div class="am-topbar-right">
+        <button onclick="window.location.href='//www.cnblogs.com'" class="am-btn am-btn-success am-topbar-btn am-btn-sm"><span class="iconfont">&#xe63e;</span> 博客园</button>
+    <button onclick="window.location.href='/account/signIn?returnUrl='+window.location.href" class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="iconfont">&#xe60b;</span> 登录</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="am-g am-container wrapper">
+    <div class="am-u-md-12">
+            <div id="schoolclass">
+                <h1 class="titlebar am-margin-top-sm">
+                    活跃班级<span class="iconfont titlebar-icon">&#xe610;</span>
+                    <span class="titlebar-line"></span>
+                    <a href="/schoolclass?sort=active" title="更多班级" class="titlebar-more">
+                        更多 &gt;
+                    </a>
+                </h1>
+                <ul class="am-avg-lg-3 am-margin-top-xl am-margin-bottom-lg">
+                        <li>
+                            <div class="am-gallery-item square-class-list">
+                                <div class="list-avatar">
+                                    <a href="/campus/hust/SQT" target="_blank"><img class="am-circle" src="https://common.cnblogs.com/images/icons/edu-class6.png"></a>
+                                </div>
+                                <ul>
+                                    <li class="of-hidden"><strong><a href="/campus/hust/SQT" title="软测2018春HUST数媒1501班（华中科技大学）" target="_blank">软测2018春HUST数媒1501班（华中科技大学）</a></strong></li>
+                                    <li><a class="am-badge am-badge-success am-round" href="/campus/hust">华中科技大学</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="am-gallery-item square-class-list">
+                                <div class="list-avatar">
+                                    <a href="/campus/hbu/Python2018Fall" target="_blank"><img class="am-circle" src="https://common.cnblogs.com/images/icons/edu-class5.png"></a>
+                                </div>
+                                <ul>
+                                    <li class="of-hidden"><strong><a href="/campus/hbu/Python2018Fall" title="Python语言程序设计2018秋学期" target="_blank">Python语言程序设计2018秋学期</a></strong></li>
+                                    <li><a class="am-badge am-badge-success am-round" href="/campus/hbu">河北大学</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="am-gallery-item square-class-list">
+                                <div class="list-avatar">
+                                    <a href="/campus/ntu/IM14" target="_blank"><img class="am-circle" src="https://common.cnblogs.com/images/icons/edu-class5.png"></a>
+                                </div>
+                                <ul>
+                                    <li class="of-hidden"><strong><a href="/campus/ntu/IM14" title="信管14" target="_blank">信管14</a></strong></li>
+                                    <li><a class="am-badge am-badge-success am-round" href="/campus/ntu">南通大学</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="am-gallery-item square-class-list">
+                                <div class="list-avatar">
+                                    <a href="/campus/njxxgc/assembleprogramming3" target="_blank"><img class="am-circle" src="https://img2018.cnblogs.com/edu/1268917/201809/1268917-20180922232517156-706708700.png"></a>
+                                </div>
+                                <ul>
+                                    <li class="of-hidden"><strong><a href="/campus/njxxgc/assembleprogramming3" title="汇编语言程序设计-网工&#x2B;网嵌" target="_blank">汇编语言程序设计-网工&#x2B;网嵌</a></strong></li>
+                                    <li><a class="am-badge am-badge-success am-round" href="/campus/njxxgc">南京信息工程大学</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="am-gallery-item square-class-list">
+                                <div class="list-avatar">
+                                    <a href="/campus/gzcc/mis" target="_blank"><img class="am-circle" src="https://common.cnblogs.com/images/icons/edu-class7.png"></a>
+                                </div>
+                                <ul>
+                                    <li class="of-hidden"><strong><a href="/campus/gzcc/mis" title="16信管" target="_blank">16信管</a></strong></li>
+                                    <li><a class="am-badge am-badge-success am-round" href="/campus/gzcc">广州商学院</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="am-gallery-item square-class-list">
+                                <div class="list-avatar">
+                                    <a href="/campus/njxxgc/assembleprogramming" target="_blank"><img class="am-circle" src="https://img2018.cnblogs.com/edu/1268917/201809/1268917-20180922232046661-349024088.png"></a>
+                                </div>
+                                <ul>
+                                    <li class="of-hidden"><strong><a href="/campus/njxxgc/assembleprogramming" title="汇编语言程序设计-计科(1)(2)(3)&#x2B;计嵌" target="_blank">汇编语言程序设计-计科(1)(2)(3)&#x2B;计嵌</a></strong></li>
+                                    <li><a class="am-badge am-badge-success am-round" href="/campus/njxxgc">南京信息工程大学</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+                    <div id="blogpost">
+                <h1 class="titlebar">
+                    作业博文<span class="iconfont titlebar-icon">&#xe60c;</span>
+                    <span class="titlebar-line"></span>
+                    <a href="/posts?filter=quality" title="更多博文" class="titlebar-more">
+                        更多 &gt;
+                    </a>
+                </h1>
+                <div class="am-u-md-12">
+                    <ul class="am-list">
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/MINATSU/p/9999142.html" target="_blank">w12</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="https://www.cnblogs.com/MINATSU/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/1482873/20180906094005.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">1.使用朴素贝叶斯模型对iris数据集进行花分类 尝试使用3种不同类型的朴素贝叶斯： 高斯分布型 from sklearn import datasets iris = datasets.load_iris() from sklearn.naive_bayes import GaussianNB g</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/gzcc/mis" target="_blank"> 16信管(广州商学院)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/MINATSU/" target="_blank"> MINATSU(张婵)</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-22 09:33</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 1</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 7</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/-freedom/p/9998057.html" target="_blank">C语言第一次作业</a>
+                                </h3>
+                                    <div class="am-u-sm-12 am-padding-left-0 am-list-main">
+                                        <div class="am-list-item-text description">1、翻阅邹欣老师博客关于师生关系博客，并回答下列问题 1）大学和高中最大的不同是没有人天天看着你，请看大学理想的师生关系是？有何感想？ 看完邹老师的关于师生关系的博客，我对于大学生与老师之间的关系有了新的看法，我觉得最理想的师生关系是：谁也不用讨好谁。老师按本学科的规律特点，把课上好，教给学生准确的</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/hljkj/TheCProgrammingLanguage_CST18-5" target="_blank"> C语言（基础）_18秋季_CST18-5班(黑龙江科技大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/-freedom/" target="_blank"> _王强</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-21 21:43</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 1</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 9</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/luzeming/p/9992240.html" target="_blank">alpha冲刺5/10</a>
+                                </h3>
+                                    <div class="am-u-sm-12 am-padding-left-0 am-list-main">
+                                        <div class="am-list-item-text description">目录 &quot;摘要&quot; &quot;团队部分&quot; &quot;个人部分&quot; 摘要 队名：小白吃 组长博客： &quot;hjj&quot; 作业博客： &quot;冲刺5&quot; 团队部分 后敬甲（组长） 过去两天完成了哪些任务 文字描述 最近事情有点多，只是跟进了下进度，写了写博客 接下来的计划 实时跟进进度 团队沟通接口和交互 及时调整团队情况 还剩下哪些任务 </div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/fzu/Grade2016SE" target="_blank"> 福州大学软工1816 | K 班(福州大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/luzeming/" target="_blank"> 路明(卢泽明)</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-20 22:35</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 3</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 27</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/0523xw/p/9985476.html" target="_blank">实验五</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="https://www.cnblogs.com/0523xw/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/1350889/20180925070846.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">1. （1）data的数据为0123h （2）cs=076c，ss=076b，ds=076a （3）X-2，X-1（编译器实际的处理方式是将data中的所有内容放在一个段的起始地址处，stack里的所有内容放在后续一个段的起始地址处） 2. 编译连接 （1）data段中的数据为：0123h （2）c</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/njxxgc/assembleprogramming" target="_blank"> 汇编语言程序设计-计科(1)(2)(3)&#x2B;计嵌(南京信息工程大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/0523xw/" target="_blank"> 语风不修仙</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-20 22:16</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 1</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 19</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/sstst/p/9990745.html" target="_blank">汇编实验五 编写、调试具有多个段的程序</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="https://www.cnblogs.com/sstst/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/1498800/20180926134650.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">https://sst.st/p/823</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/njxxgc/assembleprogramming" target="_blank"> 汇编语言程序设计-计科(1)(2)(3)&#x2B;计嵌(南京信息工程大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/sstst/" target="_blank"> 星星形星</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-20 18:42</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 1</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 16</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/-lyhxfx/p/9987744.html" target="_blank">移动通信第九组网络抓包作业</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="https://www.cnblogs.com/-lyhxfx/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/1517808/20181022183526.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">IP网络抓包分析作业 一：实验目的： 1、 学习使用数据网络数据抓包软件Wireshark， 2、 对互联网进行数据抓包，巩固对所学知识的理解 二：实验内容： 1：分析传输层协议（TCP、UDP）的报文格式，TCP协议连接管理。 TCP报文格式：每个TCP报文头部都包含端口号（Source Port</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/hnlggz/CommunicationEngineering" target="_blank"> 16级通信工程(华南理工大学广州学院)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/-lyhxfx/" target="_blank"> 劳一航</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-20 11:08</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 2</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 20</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/yifanhero/p/9986570.html" target="_blank">团队任务2</a>
+                                </h3>
+                                    <div class="am-u-sm-12 am-padding-left-0 am-list-main">
+                                        <div class="am-list-item-text description">团队序号：十一项目名称：北软排课软件的维护目标用户：北软教师撰写人;于奇炜 学号：2016035107273团队职务：产品经理 二、需求分析报告 （N）： 我们团队所接到的任务是，是将排课软件在使用过程中出现的bug进行完善，使北软软件变得更加完善。（A）： 排课软件所具有的功能分别是，排课、搜索课</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/sybrxx/sybrrg1678" target="_blank"> 沈阳北软软工1678班(沈阳北软信息职业技术学院)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/yifanhero/" target="_blank"> 依凡想给你一刀(于奇炜)</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-20 10:39</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 1</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 19</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/zbingbing/p/9978368.html" target="_blank">团队任务2：原型设计与UI设计</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="https://www.cnblogs.com/zbingbing/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/1380687/20181023153204.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">我是3号团队的产品经理 兼 UI设计师 赵冰，学号是2016035107299。我们组内成员有：周美国、王志明、赵冰、张震、王熹。我们要开发的软件是：北软毕设管理系统。目标用户主要有学校毕设管理员（夏大伟、莫菲菲）、企业毕设管理员、学生。 一、采用NABCD模型进行需求分析，并写出需求分析报告。 N</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/sybrxx/sybrrg1678" target="_blank"> 沈阳北软软工1678班(沈阳北软信息职业技术学院)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/zbingbing/" target="_blank"> 冰冰s(赵冰)</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-20 09:38</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 1</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 22</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/yinghuapiaoluo/p/9986668.html" target="_blank">实验4  [bx]和loop的使用</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="https://www.cnblogs.com/yinghuapiaoluo/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/1490095/20180927093247.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">一、预备知识 ps：不知道为什么这段内容特别陌生，很多细碎的知识点感觉懂了又好像不明白，做实验的时候才知道很多知识点不是我以为我懂了就是懂了 ps：实际上还是理解的不够透彻，而这部分又没有特别多的知识点，所以我就打算这里带一下，不分开做知识点的整理了 1、内存单元间接表示：[bx] （1）mov d</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/njxxgc/assembleprogramming3" target="_blank"> 汇编语言程序设计-网工&#x2B;网嵌(南京信息工程大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/yinghuapiaoluo/" target="_blank"> 樱花飘落の季節</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-19 23:47</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 2</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 14</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="https://www.cnblogs.com/jiangfeng123/p/9985580.html" target="_blank">印象最深刻的三位老师</a>
+                                </h3>
+                                    <div class="am-u-sm-12 am-padding-left-0 am-list-main">
+                                        <div class="am-list-item-text description">我第一位 印象深刻的老师是我的初三班主任,他对班级的每一位学生都很照顾，真的可以说是无微不至。他，更是我们班万千少女的男神，又帅又细心的一位男老师。第二位是我高中时期的语文老师，是她让我领略到了文学的魅力。虽然学校一直都重视应试化教育，但她确是与众不同的那一个，在繁忙的课程中还坚持给我们安排阅读课，</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/fzzcxy/ProgramminginPython" target="_blank"> Python编程入门(福州大学至诚学院)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="https://www.cnblogs.com/jiangfeng123/" target="_blank"> 211806389蒋锋</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-19 20:58</span>&nbsp;
+                                        <span title="评论"><i class="iconfont">&#xe606;</i> 1</span>&nbsp;
+                                        <span title="阅读"><i class="iconfont">&#xe641;</i> 10</span>
+                                    </div>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+                    <div id="homework">
+                <h1 class="titlebar">
+                    作业动态<span class="iconfont titlebar-icon">&#xe603;</span>
+                    <span class="titlebar-line"></span>
+                    <a href="/homework" title="更多作业" class="titlebar-more">
+                        更多 &gt;
+                    </a>
+                </h1>
+                <div class="am-u-md-12">
+                    <ul class="am-list">
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="/campus/qhu/16Android/homework/2430" target="_blank">Android第二次作业</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/pingliu/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/sample_face.gif"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">本次作业内容 本次作业只需要提交在一个团队成员的博客中 在博客开始给出团队成员的姓名，学号 将团队项目发布至自己博客 制作团队项目界面的过程分析 如下： 团队项目的界面截图 项目的详细介绍（例如：要实现什么样的功能？分为那几个模块？需要用到的知识点？） 将代码上传至coding.net，给出链接 格</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/qhu/16Android" target="_blank"> Android程序设计基础(青海大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/pingliu/" target="_blank"> 青海大学软件工程</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-22 16:00</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 0</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="/campus/xbsf/2017NISE/homework/2428" target="_blank">2018面向对象程序设计（Java）第13周学习要求与作业</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/nwnu-daizh/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/sample_face.gif"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">本周学习任务及作业要求参见：https://www.cnblogs.com/nwnu-daizh/p/10001223.html</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/xbsf/2017NISE" target="_blank"> 计算机科学与工程学院2017级计算机科学与技术（网络与信息安全）(西北师范大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/nwnu-daizh/" target="_blank"> 祖华</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-22 15:00</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 0</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="/campus/sybrxx/sybrrg1678/homework/2417" target="_blank">团队任务3：软件设计与开发准备</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/xiadw/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/601498/20140125130504.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">Deadline(截止时间): 2018-11-24 23:00pm 零、任务背景 每个团队应该都进行了需求分析、原型设计甚至是软件设计，下一步就要开始进行软件的设计和开发。 一、任务描述 请团队完成软件的设计并布置好开发任务： 由团队核心软件工程师在码云或Github创建远程代码仓库（称为产品代码</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/sybrxx/sybrrg1678" target="_blank"> 沈阳北软软工1678班(沈阳北软信息职业技术学院)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/xiadw/" target="_blank"> 白马学软件开发</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-21 09:28</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 0</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="/campus/sybrxx/sybrrg1656/homework/2418" target="_blank">团队任务3：软件设计与开发准备</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/xiadw/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/601498/20140125130504.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">Deadline(截止时间): 2018-11-24 23:00pm 零、任务背景 每个团队应该都进行了需求分析、原型设计甚至是软件设计，下一步就要开始进行软件的设计和开发。 一、任务描述 请团队完成软件的设计并布置好开发任务： 由团队核心软件工程师在码云或Github创建远程代码仓库（称为产品代码</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/sybrxx/sybrrg1656" target="_blank"> 沈阳北软软工1656班(沈阳北软信息职业技术学院)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/xiadw/" target="_blank"> 白马学软件开发</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-21 09:00</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 1</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="/campus/fzu/Grade2016SE/homework/2369" target="_blank">Alpha 冲刺 （6/10）</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/wyq0808/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/885889/20160123192804.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">Deadline: 2018-11-22 23：00 十分钟左右站立会议，控制好时间，不要在此会议上讨论细节问题。 全员到场，缺席需说明原因。 每组一份博客，组内共享，每人都需提交。 公共模板 队名：xxx 组长博客：(url) 作业博客：(url)（班级博客本次作业的链接） 组员1（组长） 过去两</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/fzu/Grade2016SE" target="_blank"> 福州大学软工1816 | K 班(福州大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/wyq0808/" target="_blank"> 雨勤未晴丶(王雨勤)</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-20 23:00</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 14</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="/campus/besti/2018-2019-bocsd/homework/2416" target="_blank">第八周作业（选做）</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/rocedu/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/741560/20150409200427.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">https://www.cnblogs.com/rocedu/p/5826112.html#WEEK08</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/besti/2018-2019-bocsd" target="_blank"> 2018-2019-1 信息安全系统设计基础(北京电子科技学院)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/rocedu/" target="_blank"> 娄老师</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-20 10:00</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 0</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="/campus/njxxgc/assembleprogramming/homework/2404" target="_blank">实验5</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/ccoo/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/sample_face.gif"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">实验5内容及提交、互评要求，详见课程公邮→文件中心→实验文件夹⌈实验5.pdf⌋。 ps: 实验5的互评规则在文档⌈实验5.pdf⌋中有详细说明，请在提交截止日期以后及时按要求互评。 实验学时有限，这次实验不再安排在课内实验学时，请在第6章学完后，及时跟进完成这一章后面的实验5。</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/njxxgc/assembleprogramming" target="_blank"> 汇编语言程序设计-计科(1)(2)(3)&#x2B;计嵌(南京信息工程大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/ccoo/" target="_blank"> cc00</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-19 15:00</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 11</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="/campus/njxxgc/assembleprogramming2/homework/2403" target="_blank">实验4</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/ccoo/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/sample_face.gif"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">实验4内容及提交、互评要求，详见课程公邮→文件中心→实验文件夹⌈实验4.pdf⌋。 ps: 实验4的互评规则在文档⌈实验4.pdf⌋中有详细说明，请在提交截止日期以后及时按要求互评。 咱们班教学进度有些落后，第5章学完就请及时完成这一章的实验。</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/njxxgc/assembleprogramming2" target="_blank"> 汇编语言程序设计-计科(4)(5)(6)(南京信息工程大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/ccoo/" target="_blank"> cc00</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-19 11:00</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 0</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                    <a href="/campus/besti/2018-2019-1LKPA/homework/2317" target="_blank">第七周作业</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/rocedu/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/741560/20150409200427.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">阅读学习教材「庖丁解牛Linux 」第6章，有问题蓝墨云班课中提问，24小时内回复，鼓励解答别人问题，提问前请阅读「如何提问」。 教材深入学习关注豆列「Linux内核及安全」。 学习蓝墨云班课中第七周视频「进程的执行和进程的切换」，并完成实验楼上配套实验六。，注意从下往上看。 在本周日晚12：00前</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/besti/2018-2019-1LKPA" target="_blank"> 2018-2019-1Linux内核原理与分析(北京电子科技学院)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/rocedu/" target="_blank"> 娄老师</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-19 10:00</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 0</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-right">
+                                <h3 class="am-list-item-hd">
+                                        <span class="am-badge am-badge-success am-radius" title="已完成">✓</span>
+                                    <a href="/campus/fzu/Grade2016SE/homework/2368" target="_blank">Alpha 冲刺 （5/10）</a>
+                                </h3>
+                                    <div class="feed-avatar">
+                                        <a href="http://www.cnblogs.com/wyq0808/" target="_blank"><img class="am-img-thumbnail" src="https://pic.cnblogs.com/face/885889/20160123192804.png"></a>
+                                    </div>
+                                    <div class="avatar-item-text">
+                                        <div class="am-list-item-text description">Deadline: 2018-11-20 23：00 十分钟左右站立会议，控制好时间，不要在此会议上讨论细节问题。 全员到场，缺席需说明原因。 每组一份博客，组内共享，每人都需提交。 公共模板 队名：xxx 组长博客：(url) 作业博客：(url)（班级博客本次作业的链接） 组员1（组长） 过去两</div>
+                                    </div>
+                                <div class="am-u-sm-12 am-text-sm">
+                                    <div class="am-fr">
+                                        <i class="iconfont">&#xe61f;</i><a title="班级" href="/campus/fzu/Grade2016SE" target="_blank"> 福州大学软工1816 | K 班(福州大学)</a>&nbsp;
+                                        <i class="iconfont">&#xe614;</i><a title="发布人" href="http://www.cnblogs.com/wyq0808/" target="_blank"> 雨勤未晴丶(王雨勤)</a>&nbsp;
+                                        <span title="发布时间"><i class="iconfont">&#xe616;</i> 2018-11-18 23:00</span>&nbsp;
+                                        <span title="提交"><i class="iconfont">&#xe600;</i> 79</span>
+                                    </div>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+                    <div id="overview">
+                <h1 class="titlebar">
+                    统计概览<span class="iconfont titlebar-icon">&#xe637;</span>
+                    <span class="titlebar-line"></span>
+                </h1>
+                <ul class="am-avg-lg-4 am-margin-top-xl am-margin-bottom-lg">
+                    <li>
+                        <div class="am-gallery-item square-over-view">
+                            <h3 class="title">61</h3>
+                            <small>参与校区</small>
+                            <div class="iconfont">&#xe610;</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="am-gallery-item square-over-view">
+                            <h3 class="title">264</h3>
+                            <small>创建班级</small>
+                            <div class="iconfont">&#xe639;</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="am-gallery-item square-over-view">
+                            <h3 class="title">12582</h3>
+                            <small>加入成员</small>
+                            <div class="iconfont">&#xe6bf;</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="am-gallery-item square-over-view">
+                            <h3 class="title">94979</h3>
+                            <small>累计博文</small>
+                            <div class="iconfont">&#xe60c;</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="am-gallery-item square-over-view">
+                            <h3 class="title">1956</h3>
+                            <small>布置作业</small>
+                            <div class="iconfont">&#xe603;</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="am-gallery-item square-over-view">
+                            <h3 class="title">39</h3>
+                            <small>发起投票</small>
+                            <div class="iconfont">&#xe63f;</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="am-gallery-item square-over-view">
+                            <h3 class="title">163</h3>
+                            <small>发布公告</small>
+                            <div class="iconfont">&#xe638;</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="am-gallery-item square-over-view">
+                            <h3 class="title">78718</h3>
+                            <small>历史评论</small>
+                            <div class="iconfont">&#xe62b;</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</div>
+
+    <footer class="footer">
+        <p>
+            Copyright &copy;2018 <a href="//www.cnblogs.com" target="_blank">Cnblogs, Inc.</a> Powered by ASP.NET Core on Linux. <a href="//group.cnblogs.com/edu/" target="_blank"><span class="iconfont">&#xe620;</span>问题反馈</a>
+        </p>
+    </footer>
+    <script type="text/javascript" src="/bundles/common.min.js?v=w_vMDGopkPbEmUQuW7K3u9YsmdHOEg_1d8sE7sGez9s"></script>
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments);
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-48445196-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

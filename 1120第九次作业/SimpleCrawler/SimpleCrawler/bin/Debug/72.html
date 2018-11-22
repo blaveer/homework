@@ -1,0 +1,569 @@
+﻿<html>
+	<head>
+		<title>《C#程序设计及应用》教学进度安排</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<meta content="Microsoft FrontPage 4.0" name="GENERATOR">
+		<meta content="FrontPage.Editor.Document" name="ProgId">
+		<base target="_blank">
+		<script src="jquery-1.4.2.min.js"></script>
+		<style></style>
+		<script>
+function fun(){
+	if( location.href.indexOf("cf.pku") >=0  ) return;
+	var w= window.open("about:blank","notice","HEIGHT=200,WIDTH=200" );
+	w.document.write("新的校内服务器开通了，请大家访问<a target=_blank onclick=close() href=http://cf.pku.cn/tds>cf.pku.cn/tds</a>");
+	//w.document.write("通知：12月26日的计算机课不讲课，同学们自学、复习。但本周照常上机。请同学们互相转告。");
+}
+
+
+var x = new Array();
+var i = 0;
+
+
+function whichweek()
+{
+	var now = new Date();
+	//now = new Date("2003/12/24")
+	for( i=0; i<x.length-1; i++ )
+		if( now>=x[i] && now<x[i+1]) return i;
+	return 0;
+}
+
+function scrol(lnk){
+	var w = whichweek();
+	if( w>0 ) w--; // make it a little up
+	lnk.href="#w" + w;
+	return false;
+}
+
+function openlink(lnk, w)
+{
+	if( w <= whichweek() )return true; 
+	lnk.href="#";
+	alert("Sorry,文件暂时无法打开。因为只能打开本周的媒体文件。")
+	return false;
+}
+
+function wk(){
+	var now = new Date();
+	//alert(now);
+	var first = new Date(2013,1,25); //注意月份
+	//alert(first);
+	return parseInt((now-first)/24/3600/1000/7);	
+}
+
+$(function(){
+
+	var w = wk();
+	var a=$("a");
+	a.each(function(){ 
+		var name=$(this).attr("name");
+		
+		if(name.substring(0,1)!="w") return;
+		
+		var idx = parseInt(name.substring(1));
+		//alert(idx);
+		if( idx!=w+1) return;
+		
+		var td = $(this).parent().next().next().next();
+		//alert(td.html());
+		//alert(tr.html());//filter("td:first-child")
+		//td.css("class","nodisplay");
+		td.parent().css("background-color","#ffddee");
+		
+		//td.html("&nbsp;");
+	});
+
+});
+		</script>
+	</head>
+	<body bgColor="white" onload="">
+		<center><a name="w0"></a>
+			<p><br>
+				<b>《C#程序设计及应用》教学进度安排</b>
+			</p>
+			<!--<p>&nbsp;有关课件:<a href="http://cf.pku.cn/Courseware/VB/index.htm"><FONT color="#ff0066"><STRONG>Visual 
+							Basic课件</STRONG></FONT></a><FONT color="#ff0066"><STRONG>, </STRONG></FONT>
+				<a href="http://cf.pku.cn/courseware/net/WebPage/ASP_1.htm"><FONT color="#ff0066"><STRONG>ASP课件</STRONG></FONT></a>
+			-->
+			<p><font size="-1"><font color="red">注意：随时都在维护中，请注意最新的变化。</font><BR>
+					如果本站点<b><A href="http://cf.pku.cn/tds/csharp">http://cf.pku.cn/tds/csharp</A></b>不通，请试试备份站点：<b><A href="http://www.dstang.com/csharp">http://www.dstang.com/csharp</A></b>&nbsp;
+					<P><font size="-1">主讲教师：唐大仕 <A href="mailto:dstang2000@263.net">dstang2000@263.net</A><!--&nbsp; QQ:351116463-->
+							<BR>
+							<STRONG></STRONG></font>
+					</P>
+					<P><FONT size="-1"><STRONG>教材<br>
+								《c#程序设计教程》唐大仕 </STRONG>北方交通大学出版社 清华大学出版社&nbsp;</FONT>
+						<BR>
+						<BR>
+						附：<A href="../csharp/csharp_intro.htm">《C#程序设计及其应用》课程介绍</A>&nbsp;<br>
+						&nbsp;
+						<br>
+					<P>作业提交网址<A href="ftp://csharp:csharp@cf.pku.cn">ftp://csharp:csharp@cf.pku.cn</A> <A href="HomeworkSubmit.txt">
+							具体方法</A> <FONT color="red">ftp可用资源管理器、IE、CuteFTP访问。 如果ie不能访问，请给老师直接发邮件。</FONT> 
+
+							<br /><a href="ftp://soft:soft@cf.pku.cn/"> 附：vs2010软件 ftp://soft:soft@cf.pku.cn/ （仅限校内同学学习用 </a>
+							<!--<A href="zj\hw1.xlsx">
+							第一次作业简评</A> <A href="zj\hw2.xlsx">第二次作业简评</A>--> <!--p>机房上机时，程序在目录下<a href="file:///c:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv.exe">"c:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv.exe"</a>
+<br>注1：如果是我们的示例是有.sln文件的，可以直接打开；如果是单独的.cs文件，可以新建一个项目，将代码拷贝过去进行练习。
+<br>注2：如果在机房上机时，不能按F5运行，请编译（按Ctrl+Shift+B)后，直接在Windows下找到生成的exe文件双击运行。
+--></P>
+			</p>
+			<P>
+			</P>
+			<p>
+				<table style="FONT-SIZE: 10pt; BORDER-COLLAPSE: collapse" border="1" id="tbContent" height="1086">
+					<tr>
+						<td width="22">
+							周次
+						</td>
+						<td width="23">日期
+						</td>
+						<td width="149">
+							&nbsp;讲课内容
+						</td>
+						<TD width="224">
+							重要概念
+						</TD>
+						<td width="113">
+							作业&nbsp;
+						</td>
+						<td width="209" colSpan="1" rowSpan="1">
+							讲义下载、参考信息
+						</td>
+					</tr>
+					<tr>
+						<td width="22">1、2<a name="w1"></a></td>
+						<td width="23">&nbsp;
+						</td>
+						<td width="149">第1章 C#程序设计简介</td>
+						<TD width="224">
+							<UL>
+								<LI>
+								第1节 C#与.NET概述
+								<LI>
+								第2节 C#快速入门
+								<LI>
+								第3节 基本的应用类型及其构成
+								<LI>
+									第4节 基本输入与输出
+								</LI>
+							</UL>
+						</TD>
+						<td width="113">
+						</td>
+						<td>
+							<LI>
+								<A href="01\01csharp.ppt">第1章 C#程序设计简介</A>
+							<LI>
+								<A href="01\01examples.rar">示例</A>
+							<LI>
+								<A href="software\SnippetCompiler.rar">工具SnippetCompiler</A>
+							<LI>
+								<A href="software\EditPlus.rar">工具EditPlus</A>
+							<LI>
+							<LI>
+								<A href="01\WindowsApplication1.rar">课上示例(含有一些初始的技巧,new)</A></LI>
+						</td>
+					</tr>
+					<tr>
+						<td width="22">3&nbsp;<a name="w2"></a>
+						</td>
+						<td width="23">&nbsp;
+						</td>
+						<td width="149">第2章 C#语言基础
+						</td>
+						<TD width="224">
+							<UL>
+								<LI>
+								第1节 数据类型、变量与常量
+								<LI>
+								第2节 运算符与表达式
+								<LI>
+								第3节 流程控制语句
+								<LI>
+									第4节 数组
+								</LI>
+							</UL>
+						</TD>
+						<td width="113"><A href="02\02hw.htm"><FONT color="red">第1次作业：自动出题的程序</FONT></A> （请于10月13日前提交）
+						</td>
+						<td>
+							<LI>
+								<A href="02\02csharp.ppt">第2章 C#语言基础</A>
+							<LI>
+								<A href="02\02examples.rar">示例</A>
+							<LI>
+								<A href="02\02class.rar">课上示例(基本语法，画圆，角谷猜想,约瑟夫问题)</A>
+							<LI>
+								<A href="02\02class2.rar">课上示例2(排块游戏：使用数组，使用函数)</A><FONT color="red">new!!!</FONT>&nbsp;&nbsp;</LI>
+						</td>
+					</tr>
+					<tr><td>4<td>国庆节<td>&nbsp;<td>&nbsp;<td>&nbsp;</td></tr>
+					<tr>
+						<td width="22">5、6&nbsp;<a name="w3"></a>
+						</td>
+						<td width="23">
+						</td>
+						<td width="149">第3章 面向对象的C#语言
+						</td>
+						<TD width="224">
+							<UL>
+								<LI>
+								类、域、方法
+								<LI>
+								属性、索引
+								<LI>
+								类的继承
+								<LI>
+								修饰符
+								<LI>
+								接口
+								<LI>
+								结构与枚举
+								<LI>
+								面向对象：继承、封装、多态
+								<LI>
+									UML类图简介
+								</LI>
+							</UL>
+						</TD>
+						<td width="113">
+						</td>
+						<td>
+							<LI>
+							<LI>
+								<A href="03\03csharp.ppt">第3章 面向对象的C#语言</A>
+							<LI>
+								&nbsp;<A href="03\03examples.rar">示例</A>
+							<LI>
+								<A href="03\ClassAndInterface.pdf">类和接口(电子文档)</A>
+							<LI>
+								<A href="ref\CSharpLanguageSpecificationV1.2.doc">C#语言规范</A></LI>
+						</td>
+					</tr>
+					<tr>
+						<td width="22">6、7&nbsp;<a name="w4"></a>
+						</td>
+						<td width="23">
+						</td>
+						<td width="149">第4章 C#语言高级特性
+						</td>
+						<TD width="224">
+							<UL>
+								<LI>
+								4.1 程序的组织
+								<LI>
+								4.2 委托与事件
+								<LI>
+								4.3 操作符重载
+								<LI>
+								4.4 异常处理
+								<LI>
+								4.5 Attribute
+								<LI>
+								4.6 C#语言中的其他成分
+								<LI>
+									4.7 程序的调试
+								</LI>
+							</UL>
+						</TD>
+						<td width="113"><A href="04\04hw.htm"><FONT color="red">第2次作业：银行ATM机</FONT></A>
+						</td>
+						<td>
+							<LI>
+								<A href="04\04csharp.ppt">第4章 C#语言高级特性</A>
+							<LI>
+								<A href="04\04examples.rar">示例</A>
+							<LI>
+								<A href="04\EventWhenDownload.rar">事件示例</A>
+							<LI>
+								<A href="04\CSharpFeature.pdf">C#语言高级特性(电子文档)</A>
+							<LI>
+								<A href="04\BankSystem-v1-v2.rar">课上示例：银行系统(事件、异常)</A> <FONT color="red">new!!!</FONT>
+							<LI>
+								&nbsp;<A href="04\MethodDelegateLamda.rar">课上示例：委托、匿名方法、Lamda表达式</A><FONT color="red">new!!!</FONT></LI>
+						</td>
+					</tr>
+					<tr>
+						<td width="22" height="27">8&nbsp;<a name="w5"></a>
+						</td>
+						<td width="23" height="27">
+						</td>
+						<td width="149" height="27">
+							<P>第5章 基础类及常用算法
+							</P>
+						</td>
+						<TD width="224" height="27">
+						</TD>
+						<td width="113" height="27">
+						</td>
+						<td height="27">
+							<LI>
+								<A href="05\05csharp.ppt">第5章 基础类及常用算法</A>
+							<LI>
+								&nbsp;<A href="05\05examples.rar">示例</A>
+							<LI>
+								<A href="05\forDebug.rar">用于调试的例子</A><FONT color="red">new!!!</FONT></LI>
+						</td>
+					</tr>
+					<tr>
+						<td width="22">8&nbsp;<a name="w6"></a></td>
+						<td width="23"></td>
+						<td width="149">第6章 流、文件</td>
+						<TD width="224">
+						</TD>
+						<td width="113">
+						</td>
+						<td>
+							<LI>
+								<A href="06\06csharp.ppt">第6章 流、文件</A>
+							<LI>
+								&nbsp;<A href="06\06examples.rar">示例</A> <FONT color="#ff0000"></FONT>
+							<LI>
+							<LI>
+								<A href="06\DirSize.rar">课上示例：文件夹下所有文件的大小</A> <FONT color="red">new!!!</FONT>
+							<LI>
+								<A href="06\BmpFileReader.rar">课上示例：读取bmp文件</A><FONT color="red">new!!!</FONT></LI>
+						</td>
+					</tr>
+					<tr>
+						<TD width="22">9&nbsp;<a name="w7"></a>
+						</TD>
+						<TD width="23">
+						</TD>
+						<td width="149">
+							<P>第7章 文本处理及正则表达式
+							</P>
+						</td>
+						<TD width="224">
+						</TD>
+						<td width="113">
+						</td>
+						<td>
+							<LI>
+								<A href="07\07csharp.ppt">第7章 文本处理及正则表达式</A> <A href="07\07examples.rar">示例</A>
+							<LI>
+								<A href="ref\RegIntro.rar">一篇介绍文章</A>
+							<LI>
+								<A href="software\Expresso.rar">Expresso工具</A><FONT color="red">(有更新)</FONT>
+							<LI>
+								<A href="07\reg_airline.rar">正则表达式示例--航班表</A><FONT color="red">new!!!</FONT></LI>
+						</td>
+					</tr>
+					<TR>
+						<TD width="22">9<a name="w8"></a></TD>
+						<TD width="23"></TD>
+						<TD width="149">
+							第8章 Xml信息处息
+						</TD>
+						<TD width="224">
+						</TD>
+						<TD width="113">
+						</TD>
+						<TD>
+							<LI>
+								<A href="08\08csharp.ppt">第8章 Xml信息处息</A>
+							<LI>
+								<A href="08\08examples.rar">示例</A>
+							<LI>
+								<A href="ref\XmlPathLanguage.rar">XmlPathLanguage</A> <A href="software\XmlVisualizer.rar">
+									XmlVisualizer</A> <A href="software\XPathBuilder.rar">XPathBuilder</A></LI>
+						</TD>
+					</TR>
+					<TR>
+						<td width="22">&nbsp;<a name="w9"></a> &nbsp;10
+						</td>
+						<td width="23">
+						</td>
+						<td width="149">第9章 网络信息获取
+						</td>
+						<TD width="224">
+						</TD>
+						<td width="113"><A href="hw\03hw\hw.txt"><FONT color="red">第3次作业：网络信息获取及文本处理</FONT></A>
+						</td>
+						<td>
+							<LI>
+								<A href="09\09csharp.ppt">第9章 网络信息获取</A>
+							<LI>
+								<A href="09\09examples.rar">示例</A> <A href="ref\rfc1945_http1.0.txt">HTTP协议</A>
+							<LI>
+								<A href="09\SimpleWebCrawler.rar">课上示例：一个简单的网络爬虫程序</A><FONT color="red">new!!!</FONT>
+							<LI>
+								<A href="09\PkuIpgw.rar">课上示例：北大ip网关的访问</A><FONT color="red">new!!!</FONT></LI>
+						</td>
+					</TR>
+					<TR>
+						<TD width="22" height="17">11</TD>
+						<TD width="23" height="17"></TD>
+						<TD width="149" height="17">第10章 Windows窗体与控件</TD>
+						<TD width="224" height="17"></TD>
+						<TD width="113" height="17"></TD>
+						<TD height="17">
+							<LI>
+								<A href="10\10csharp.ppt">第10章 Windows窗体与控件</A>
+							<LI>
+								<A href="10\10examples.rar">示例</A>
+							<LI>
+								<A href="software\UISpy.rar">工具UISpy</A></LI>
+						</TD>
+					</TR>
+					<tr>
+						<td width="22">&nbsp;<a name="w11"></a> 11
+						</td>
+						<td width="23">
+						</td>
+						<td width="149">
+							<P>第11章 多线程
+							</P>
+						</td>
+						<TD width="224">
+						<td width="113">&nbsp;
+						</td>
+						<td>
+							<LI>
+								<A href="11\11csharp.ppt">第11章 多线程</A>
+							<LI>
+								<A href="11\11examples.rar">示例</A></LI>
+						</td>
+						</TD>
+					</tr>
+					<tr>
+						<td width="22">&nbsp;<a name="w11"></a> 12
+						</td>
+						<td width="23">
+						</td>
+						<td width="149">
+							第12章 绘图及图像
+						</td>
+						<TD width="224">
+						</TD>
+						<td width="113"><A href="hw\04hw\hw.htm"><FONT color="red">第4次作业：Windows界面及图形图像</FONT></A>
+							<A href="hw\thw\hw.htm"><FONT color="red">期末作业：开发一个程序或写一篇文章</FONT></A>
+						</td>
+						<td>
+							<LI>
+								<A href="12\12csharp.ppt">第12章 绘图及图像</A>
+							<LI>
+								<A href="12\12examples.rar">示例</A>
+							<LI>
+								<A href="12\DrawAdvance.rar">另一些绘图示例</A>
+							<LI>
+								<A href="12\ImageProcess.rar">图像处理示例</A>
+							<LI>
+								<A href="12\lrcPlayer-StringOnScreen.rar">课上示例：播放歌曲并在屏幕上显示歌词</A> <FONT color="red">new!!!</FONT>
+							<LI>
+								<A href="12\KaleidoApp.rar">课上示例：万花筒(结合对象设计、绘图、事件）</A> <FONT color="red">new!!!</FONT></LI>
+						</td>
+					</tr>
+					<tr>
+						<td width="22">13&nbsp;<a name="w12"></a>
+						</td>
+						<td width="23">
+						</td>
+						<td width="149">第13章 访问数据库
+						</td>
+						<TD width="224">
+						</TD>
+						<td width="113">
+						</td>
+						<td>
+							<LI>
+								<A href="13\13csharp.ppt">第13章 访问数据库</A>
+							<LI>
+								<A href="13\13examples.rar">示例</A>
+							<LI>
+								<A href="13\3Layer.rar">三层构架的例子</A></LI>
+						</td>
+					</tr>
+					<tr>
+						<td width="22">13&nbsp;<a name="w13"></a>
+						</td>
+						<td width="23">
+						</td>
+						<td width="149">
+							第14章 深入理解C#语言
+						</td>
+						<TD width="224">
+						</TD>
+						<td width="113">
+						</td>
+						<td>
+							<LI>
+								<A href="14\14csharp.ppt">第14章 深入理解C#语言</A>
+							<LI>
+								<A href="14\14examples.rar">示例</A>
+							<LI>
+								<A href="14\StaticConstructorSequence.rar">课上示例：静态构造函数执行顺序</A> <FONT color="red">new!!!</FONT></LI>
+						</td>
+					</tr>
+					<tr>
+						<td width="22">13&nbsp;<a name="w14"></a>
+						</td>
+						<td width="23">
+						</td>
+						<td width="149">第15章 如何写好应用程序
+						</td>
+						<TD width="224">
+						</TD>
+						<td width="113">
+						</td>
+						<td>
+							<LI>
+								<A href="15\15csharp.ppt">第15章 如何写好应用程序</A>
+							<LI>
+								<A href="15\15examples.rar">示例</A>
+							<LI>
+								<A href="ref\SharpDevelopCodingStyle03.pdf">编码规范</A></LI>
+						</td>
+					</tr>
+					<tr>
+						<td width="22" height="17">15&nbsp;<a name="w15"></a>
+						</td>
+						<td width="23" height="17">
+						</td>
+						<td width="149" height="17">复习
+						</td>
+						<TD height="17" width="224"></TD>
+						<td width="113" height="17">
+						</td>
+						<td height="17">
+						</td>
+					</tr>
+					<!--TR>
+								<TD width="17">16</TD>
+								<TD width="37">6.16</TD>
+								<TD width="113">
+									(端午节,放假)
+								</TD>
+								<TD width="177"></TD>
+								<TD width="177"></TD>
+								<TD ></TD>
+							</TR-->
+					<tr>
+						<td width="22"><a name="w18"></a>
+						</td>
+						<td width="23"></td>
+						<td width="149">
+						</td>
+						<TD width="224"><font size="+2"></font></TD>
+						<td width="113">
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td width="22"></td>
+						<td width="23"></td>
+						<td width="149"></td>
+						<TD width="224"></TD>
+						<td width="113"></td>
+						<td>
+						</td>
+					</tr>
+				</table>
+			</p>
+		</center>
+		</FONT>
+	</body>
+</html>

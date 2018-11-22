@@ -1,0 +1,7 @@
+E:\vs date\C#\homework\1120第九次作业\SimpleCrawler\SimpleCrawler\bin\Debug\SimpleCrawler.exe.config
+E:\vs date\C#\homework\1120第九次作业\SimpleCrawler\SimpleCrawler\bin\Debug\SimpleCrawler.exe
+E:\vs date\C#\homework\1120第九次作业\SimpleCrawler\SimpleCrawler\bin\Debug\SimpleCrawler.pdb
+E:\vs date\C#\homework\1120第九次作业\SimpleCrawler\SimpleCrawler\obj\Debug\SimpleCrawler.csprojResolveAssemblyReference.cache
+E:\vs date\C#\homework\1120第九次作业\SimpleCrawler\SimpleCrawler\obj\Debug\SimpleCrawler.csproj.CoreCompileInputs.cache
+E:\vs date\C#\homework\1120第九次作业\SimpleCrawler\SimpleCrawler\obj\Debug\SimpleCrawler.exe
+E:\vs date\C#\homework\1120第九次作业\SimpleCrawler\SimpleCrawler\obj\Debug\SimpleCrawler.pdb

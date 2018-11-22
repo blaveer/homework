@@ -1,0 +1,408 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Ѹ�׼��ٰ� v1.0.35.366 ��ʽ�� - ������� - A5Դ��</title>
+<meta name="keywords" content="Ѹ�׼��ٰ�,Ѹ�׼��ٰ�ٷ�����,Ѹ�׼��ٰ�����" />
+<meta name="description" content="Ѹ�׼��ٰ� v1.0.35.366 ��ʽ�����أ�Ѹ�׼��ٰ�3��25�ո���1.0.2.24���Ż������İ�װ���̣�Ĭ�ϸ��������ܵ����ã����ʹ�࣬���������P2P����ģ�鳣פ�����Ȳ�Ӽ��٣�����һЩ�߼����ܣ�ȥ����һЩ�����棬�����������Ѹ�ס�" />
+<meta http-equiv="mobile-agent" content="format=[xhtml];url=http://m.down.admin5.com/network/xunlei-jisu.html">
+<link rel="alternate" media="only screen and(max-width: 640px)" href="http://m.down.admin5.com/network/xunlei-jisu.html" >
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="/templets/css/public.css" rel="stylesheet" type="text/css" />
+<link href="/templets/css/content.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="/include/dedeajax2.js"></script>
+<script type="text/javascript" src="/data/js/xxk.js"></script>
+<!--<script language="javascript" type="text/javascript" src="/data/js/jquery.min.js"></script>-->
+<script language="javascript" type="text/javascript">
+<!--
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('���ղ��ѱ������ร�'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("���Ѿ���̬����"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+</head>
+<body>
+<div class="divcenter">
+  <div id="logo" class="dis"><a href="/"><img src="/images/logo.gif" width="141" height="60" alt="A5Դ��-��վԴ���վ����������վ" /></a></div>
+  <div id="top_ads" class="dis"> 
+    <script language="javascript" src="/z/a1.js"></script> 
+  </div>
+</div>
+<div class="delfloat"></div>
+<div id="menu" class="divcenter">
+  <ul id="menuul" class="f_left">
+    <li><a href="http://down.admin5.com/info/">��Ѷ</a></li>
+    <li><a href="http://down.admin5.com/">Դ��</a></li>
+    <li><a href="http://down.admin5.com/" class="f">���</a></li>
+    <li><a href="http://ziti.admin5.com/">����</a></li>
+    <script type="text/javascript" src="/z/ad-daohang.js"></script>
+  </ul>
+  <div> 
+    <script type="text/javascript" src="/data/js/daohang.js"></script> 
+  </div>
+</div>
+<div class="delfloat"></div>
+<div id="searchdiv" class="divcenter">
+  <div class="searchdiv_menu"><a href="http://down.admin5.com/fuwuqi/">���������</a>
+  <a href="http://down.admin5.com/network/">�������</a>
+  <a href="http://down.admin5.com/app/">Ӧ�����</a>
+  <a href="http://down.admin5.com/sys/">ϵͳ����</a>
+  <a href="http://down.admin5.com/tuxiang/">ͼ��ͼ��</a>
+  <a href="http://down.admin5.com/media/">��ý��</a>
+  <a href="http://down.admin5.com/safe/">ɱ����ȫ</a>
+  <a href="http://down.admin5.com/youxi/">��Ϸ</a>
+  <a href="http://down.admin5.com/dll/" style="background:none;">DLL�ļ�</a></div>
+  <form action="/plus/search.php" name="formsearch" target="_blank">
+  <div class="seacdiv_form dis">
+    <input name="keyword" type="text" id="search-keyword" />
+  </div>
+  <div class="seacdiv_form dis">
+    <select name='typeid' style="height:22px; line-height:22px;">
+      <option value='0' selected>������Ŀ</option>
+      <option value='870'>��վԴ��</option>
+      <option value='646'>Դ����</option>
+      <option value='378'>Դ��ģ��</option>
+      <option value='871'>�������</option>
+      <option value='840'>�鼮�̳�</option>
+    </select>
+    <input type="hidden" name="searchtype" value="title">
+    <input type="hidden" name="kwtype" value="0">
+  </div>
+  <div class="seacdiv_form dis">
+    <input type="image" class="search_but" src="/templets/images/searchbut.gif" />
+  </div>
+  </form>
+  <div class="seacdiv_form gjsearch dis"><a href="/plus/heightsearch.php">�߼�����</a></div>
+  <div class="seacdiv_form dis">�ؼ��֣�<a href="http://down.admin5.com/plus/search.php?keyword=Discuz&typeid=870&searchtype=title&kwtype=0" rel="nofollow">Discuz��</a>&#160;&#160;<a href="http://down.admin5.com/plus/search.php?keyword=Axure&typeid=871&searchtype=title&kwtype=0" rel="nofollow">Axure</a>&#160;&#160;<a href="http://down.admin5.com/plus/search.php?keyword=%CD%C5%B9%BA&typeid=870&searchtype=title&kwtype=0&x=42&y=3" rel="nofollow">�Ź�ϵͳ</a></div>
+  <div class="search_fb dis"><span><a href="/plus/list.php?tid=409" style="color:#2e3092;">���¸���</a></span><span><a href="http://down.admin5.com/member/index.php" rel="nofollow"><B>������Դ</B></a></span><span><a href="/data/Contact.html" style="color:#2e3092;" rel="nofollow">�Ὠ��</a></span><span><a title="�����´�ʹ�� ����" href="#" onClick="window.external.AddFavorite('http://down.admin5.com/', 'A5Դ�� - ��վԴ���վ����������վ'); return false;" style="color:#2e3092;">�ղر�վ</a></span></div>
+</div>
+<div class="divcenter"><img src="/templets/images/search_foot.gif" width="980" alt="��վԴ������" height="2" /></div>
+
+<div id="a22"> 
+  <script type="text/javascript" src="/z/a2aa.js"></script>
+  <div class="delfloat"></div>
+</div>
+<div id="a3"> 
+  <script type="text/javascript" src="/z/a3.js"></script> 
+</div>
+<div class="divcenter path"><script type="text/javascript" src="/data/js/daohang2.js"></script> 
+  <span>��ǰλ�ã�</span><a href='http://down.admin5.com/'>A5Դ��</a> >  <a href='/soft/'>�������</a> >  <a href='/network/'>�������</a> >  <a href='/network/xzgj/'>���ع���</a> >  <strong><a href="/network/xunlei-jisu.html">Ѹ�׼��ٰ� v1.0.35.366 ��ʽ��</a></strong></div>
+<div class="divcenter">
+  <div class="conleft f_left">
+    <div class="d_con700"></div>
+    <div class="b_con700 dhbg">
+      <h1>Ѹ�׼��ٰ� v1.0.35.366 ��ʽ��</h1>
+      <div class="soft_info f_left">
+        <ul>
+          <li class="long">��Դ���ӣ�<span>[ <a href="#link" title="Ѹ�׼��ٰ� v1.0.35.366 ��ʽ�����ص�ַ">���ص�ַ</a> ]&#160;&#160;[ <a href="#Comment"  title="���ۻ򱨴�Ѹ�׼��ٰ� v1.0.35.366 ��ʽ��">���۱���</a> ]</span></li>
+          <li>��Ȩ��ʽ��<span>������</span></li>
+          <li>�������ԣ�<span>��������</span></li>
+          <li>�ļ���С��<span>23.53 MB</span></li>
+          <li>����ʱ�䣺<span>2016-11-20</span></li>
+          <li>��Դ���ͣ�<span>�������</span></li>
+          <li>�Ƽ��ȼ���<span>������</span></li>
+          <li class="long">ƽ̨������<span>Win2003,WinXP,Win2000,Win9X</span></li>
+          <li>������ҳ��<span><a href="http://vip.xunlei.com/fast_xl/" target="_blank">����鿴</a></span></li>
+          <li>��ʾ��ַ��<span><a href="http://" target="_blank">����鿴</a></span></li>
+        </ul>
+        <div class="delfloat"></div>
+        <div class="conads1"> 
+          <script type="text/javascript" src="http://down.admin5.com/z/c1.js"></script> 
+        </div>
+      </div>
+      <div class="conads2 f_left"> 
+        <script type="text/javascript" src="http://down.admin5.com/z/c2.js"></script> 
+      </div>
+      <div class="delfloat"></div>
+      <div class="con_title">��ϸ���� - [ Ѹ�׼��ٰ� v1.0.35.366 ��ʽ�� ] </div>
+      <div class="con_text"> <p><strong>Ѹ�׼��ٰ�</strong>����Ѹ���Ƴ����������ع�����������ȥ����Ѹ��ԭ������ǿ���ܣ����沼��Ҳ������ȫ�¸İ棬�ع鼫������VIP�˺ţ��޹�棬�Ʋ���ѿ����޶����ļ����ڴ�ռ���١�һ��ֻΪ���ط��񣡾����Ǳر������ع����������ֵ��ӵ�У�</p>
+<div class="softxiaozi">Ѹ�׼��ٰ���ϸ��װͼ��</div>
+<div>�򵥿��ŵİ�װ���棬�ṩһ����װ�ı�ݲ�������������ϰ��С�໹��ѡ�����Զ��尲װ����ͼ��</div>
+<div>&nbsp;</div>
+<div><img width="458" border="0" height="506" style="cursor: pointer" alt="����Ѹ��" onclick="window.open('/uploads/allimg/140319/890_140319165901_1.jpg')" src="/uploads/allimg/140319/890_140319165901_1.jpg" /></div>
+<div>&nbsp;</div>
+<div>�ر����ѣ����ڼ��ٰ�Ѹ����֧�ֶ�������ģ���˰�װ������Ҫ�ر����е����������Ȼ����װ�����裬</div>
+<div>���ŵ���תʽ��װ���ȣ��̲�ס�ٽ�һͼ��</div>
+<div>&nbsp;</div>
+<div><img width="458" border="0" height="506" style="cursor: pointer" alt="Ѹ�׼��ٰ�" onclick="window.open('/uploads/allimg/140319/890_140319170335_1.jpg')" src="/uploads/allimg/140319/890_140319170335_1.jpg" /></div>
+<div>&nbsp;</div>
+<div>����Ѹ���������飬֧��ed2k��http��bt��uagnet��������Э�飬����ͬʱ���100��������Ϣ�����б�ݵ�BT���ӿ�����ӡ�</div>
+<div>&nbsp;</div>
+<div><img width="640" border="0" height="434" style="cursor: pointer" alt="Ѹ�׼��ٰ�ٷ�����" src="http://down.admin5.com/uploads/allimg/140319/890_140319171126_1.jpg" /></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>˵�����أ��������������ٶȣ������ٶȳ�����������������ع��߻����кܴ��ϵ�ģ�һ��������һ��������ʵ�ļ��ٰɣ�</div>
+<div>&nbsp;</div>
+<div><img width="640" border="0" height="434" style="cursor: pointer" alt="Ѹ�׼��ٰ淽����" src="http://down.admin5.com/uploads/allimg/140319/890_140319171203_1.jpg" /></div>
+<div>&nbsp;</div>
+<div>ʣ�µĹ���������á�������������ģʽ�Լ����ѵȵ���๦�ܣ��Ͳ��ڴ�һһ�����ˣ���Ҫ�������Լ���������ɣ�</div>
+<div>&nbsp;</div>
+<div><strong>Ѹ�׼��ٰ�</strong>��Ѹ���Ƴ���ȫ�����ع��ߣ��ð汾ӵ��ȫ�µĽ��棬ȥ��桢���ٿ졢����ˬ�������ܡ���ϤVIP��Ŀ����Ŷӷ����˾���汾��ȫ�¿�ʼ����ļ��ٰ棬�����Ż������������ٶȣ����沼��Ҳ������ȫ�¸İ棬���û��������ĵ�����Ѹ�׼����������顣��������ص�����ˬ��Լ������VIP�˺ţ��޹�棬�Ʋ���ѿ����޶����ļ����ڴ�ռ���١�</div>
+<div class="softxiaozi">����Ѹ�׵���ɫ</div>
+<p>���簲װ<br />
+���򷱸��İ�װ���̣�Ĭ�ϸ��������ܵ����ã����ʹ�࣬�������<br />
+���ٿ�<br />
+P2P����ģ�鳣פ�����Ȳ�Ӽ��٣����ٰ���ǿ�<br />
+������̬<br />
+�����󾫣�����һЩ�߼����ܣ�ȥ��һЩ�����档�����������Ѹ��</p>
+<div>&nbsp;</div>
+<div><img width="600" border="0" height="382" style="cursor: pointer" alt="Ѹ�׼��ٰ�" onclick="window.open('/uploads/allimg/140317/1976_140317161507_1.jpg')" src="/uploads/allimg/140317/1976_140317161507_1.jpg" /></div>
+<p>&nbsp;</p>
+<div class="tssm">���ڼ��ٰ�Ѹ����֧�ֶ�������ģ���˰�װ������Ҫ�ر����е����������Ȼ����װ������</div>
+<p>&nbsp;</p>
+<div class="softxiaozi">����Ķ�</div>
+<p><a target="_blank" href="http://down.admin5.com/info/2014/0319/108779.html">&nbsp;Ѹ���Ƴ����ٰ� ������������ȫ�½���</a></p>
+<p><a target="_blank" href="http://down.admin5.com/info/2014/0325/108929.html">Ѹ�׼��ٰ�3��25�ո���v1.0.2.24</a></p>
+<p><a target="_blank" href="http://down.admin5.com/info/2014/0807/113412.html?1407394396">&nbsp;Ѹ�׼��ٰ�1.0.13������</a></p><a name="link"></a> 
+        <script type="text/javascript" src="http://down.admin5.com/z/c5.js"></script> 
+      </div>
+    </div>
+    <div class="f_con700"></div>
+    <div class="d_700 m10 title">���ص�ַ - [ Ѹ�׼��ٰ� v1.0.35.366 ��ʽ�� ]</div>
+    <div class="b_con700 dhbg">
+      <ul class="down-anniu">
+        <li><a href="http://110.85.5.26:89/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow"> �Ϻ��������ص㣨������</a></li><li><a href="http://110.85.5.26:89/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow">3A�������ص㣨����</a></li><li><a href="http://110.85.5.26:89/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow"> �й��������ص㣨����</a></li><li><a href="http://175.6.244.211:88/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow"> ��Ѷ�������ص㣨����</a></li><li><a href="http://175.6.244.211:88/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow"> ���ӿƼ����ص㣨����</a></li><li><a href="http://175.6.244.211:88/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow"> �˶��������ص㣨����</a></li><li><a href="http://downadmin5-112.xzcheng.com/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow"> ��ҳ�������ص㣨����</a></li><li><a href="http://downadmin5-112.xzcheng.com/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow">�����������ص㣨����</a></li><li><a href="http://downadmin5-112.xzcheng.com/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow"> ֪�������ص㣨����</a></li><li><a href="http://downadmin5-112.xzcheng.com/soft2/201201/ThunderSpeed_a5.zip" name="ww"  target="_blank"  rel="nofollow"> ���������ص㣨����</a></li> 
+        <!-- Baidu Button BEGIN -->
+        <div id="bdshare" class="bdshare_b" style="line-height: 12px; margin-top:3px;"> <img src="http://bdimg.share.baidu.com/static/images/type-button-2.jpg?cdnversion=20120831" /> </div>
+        <!-- Baidu Button END -->
+      </ul>
+      <script language="JavaScript" type="text/javascript" src="http://down.admin5.com/z/c3.js"></script>
+      <div class="delfloat"></div>
+      <script src="http://down.admin5.com/z/f0.js"></script>
+      <div>
+        <dl class="con_att_r m10">
+          <dt>������</dt>
+		  <dd><span>07-16</span><a href='/network/98140.html'>BT���ع���</a></dd>
+<dd><span>05-15</span><a href='/network/qqxuanfeng.html'>QQ����ٷ����°�</a></dd>
+<dd><span>07-16</span><a href='/network/xunlei.html'>Ѹ�׹ٷ���</a></dd>
+<dd><span>06-27</span><a href='/network/91237.html'>�����ĵ�������</a></dd>
+          
+        </dl>
+        <dl class="con_att m10">
+          <dt>����˵��</dt>
+          <dd>�Ƽ�ʹ��<a href="http://down.admin5.com/network/xunlei-jisu.html" class="cblue" target="_blank">Ѹ��</a>��<a href="http://down.admin5.com/network/qqxuanfeng.html" class="cblue" target="_blank">QQ����</a>���أ���ʹ��<a href="http://down.admin5.com/app/winrar.html" class="cblue" target="_blank">WINRAR</a>��ѹ�ļ���</dd>
+          <dd>���ر�վ��Դ����������ݲ����������һ��ʱ�����ԣ�</dd>
+          <dd>��վ��Դͨ�� <a href="http://down.admin5.com/safe/QQdiannaoguanjia.html" target="_blank" class="cblue">QQ���Թܼ�</a>��<a href="http://down.admin5.com/safe/360weishi.html" target="_blank" class="cblue">360��ȫ��ʿ</a> �������⣻</dd>
+          <dd>��վ������Դ��ѧϰ����ʹ�ã�����ҵ��;���빺���档</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="f_con700"></div>
+    <div class="d_700 m10 title">���Ѷԡ�Ѹ�׼��ٰ� v1.0.35.366 ��ʽ�桱������</div>
+    <div class="b_700 dhbg"> <!--PC��-->
+<div style="padding:0 10px;">
+<div id="SOHUCS" sid="108784"></div>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+window.changyan.api.config({
+appid: 'cysWJCWgI',
+conf: 'prod_d2c82f3655155fc5e4355be90a06a366'
+});
+</script>
+</div>
+      <div class="pldiv plhistory"><a href="#" style=" float:right;">���ض���</a>��һƪ��<a href='/network/108189.html'>���������� v1.0.2.8</a>  &nbsp; ��һƪ��<a href='/network/109660.html'>Go!zilla�����ع��ߣ� v5.1</a> </div>
+    </div>
+    <div class="f_700"></div>
+  </div>
+  <div class="conright f_left">
+      <div class="d_270 title">��ϲ��������ô��</div>
+      <div class="b_270_2 dhbg">
+        <div id="newdigg">
+          <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',108784)">
+            <div class="digg_act">��</div>
+            <div class="digg_num">(0)</div>
+            <div class="digg_percent">
+              <div class="digg_percent_bar"><span style="width:0%"></span></div>
+              <div class="digg_percent_num">0%</div>
+            </div>
+          </div>
+          <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',108784)">
+            <div class="digg_act">��</div>
+
+            <div class="digg_num">(0)</div>
+            <div class="digg_percent">
+              <div class="digg_percent_bar"><span style="width:0%"></span></div>
+              <div class="digg_percent_num">0%</div>
+            </div>
+          </div>
+        </div>
+        <script language="javascript" type="text/javascript">getDigg(108784);</script>
+        <div class="delfloat"></div>
+        <span  class="digg_xiazai">[ <a  href="#link" title="���ء�Ѹ�׼��ٰ� v1.0.35.366 ��ʽ�桱">���ص�ַ</a> ]</span><span class="digg_pinglun">[ <a  href="#Comment" title="���ۡ�Ѹ�׼��ٰ� v1.0.35.366 ��ʽ�桱">�����²�</a> ]</span> </div>
+      <div class="f_270"></div>
+	  <div class="d_270 title m10">�����������</div>
+    <div class="b_270 dhbg">
+      <ul>
+        <li><img src="/templets/images/ico/1.gif"><a target='_blank' href='/network/91237.html'>�����ĵ�������2013 v3.0.5 ��ɫ��</a> </li>
+<li><img src="/templets/images/ico/2.gif"><a target='_blank' href='/network/xunlei.html'>Ѹ��9 v9.1.43.938 �ٷ���ʽ��</a> </li>
+<li><img src="/templets/images/ico/3.gif"><a target='_blank' href='/network/91235.html'>�����Ŀ�������(�ٶ��Ŀ�������) v3.0.9 ��ɫ��</a> </li>
+<li><img src="/templets/images/ico/4.gif"><a target='_blank' href='/network/xunlei-jisu.html'>Ѹ�׼��ٰ� v1.0.35.366 ��ʽ��</a> </li>
+<li><img src="/templets/images/ico/5.gif"><a target='_blank' href='/network/97586.html'>������������ v2014</a> </li>
+<li><img src="/templets/images/ico/6.gif"><a target='_blank' href='/network/qqxuanfeng.html'>QQ���� v4.8.773 �ٷ���</a> </li>
+<li><img src="/templets/images/ico/7.gif"><a target='_blank' href='/network/FlashGet.html'>FlashGet�쳵�ٷ��������İ� v3.7.0.1222</a> </li>
+<li><img src="/templets/images/ico/8.gif"><a target='_blank' href='/network/99765.html'>һ·���������� v4.0</a> </li>
+<li><img src="/templets/images/ico/9.gif"><a target='_blank' href='/network/77732.html'>˶��-FLV��Ƶ������� v0.4.9.1</a> </li>
+<li><img src="/templets/images/ico/10.gif"><a target='_blank' href='/network/foxy.html'>foxy(��ý����������ƽ̨)2013�ٷ����� v2.0.1.3 �������İ�</a> </li>
+<li><img src="/templets/images/ico/11.gif"><a target='_blank' href='/network/96539.html'>MTV���ذ��� v2.0.3.0</a> </li>
+<li><img src="/templets/images/ico/12.gif"><a target='_blank' href='/network/83653.html'>ħצС˵�Ķ���(TXTС˵���ع���) v5.3.2.0</a> </li>
+
+      </ul>
+      <div class="delfloat"></div>
+    </div>
+    <div class="f_270"></div>
+	  <script type="text/javascript" src="/z/c8.js"></script>
+      <div class="homeleft f_left" id="xxkmenu1">
+        <ul class="d_270 newxxk m10">
+          <li class="f" onMouseOver="Tab1(0)">Դ���Ƽ�</li>
+          <li  onMouseOver="Tab1(1)">����Ƽ�</li>
+        </ul>
+        <div class="delfloat"></div>
+        <div class="dhbg" id="xxkbody1"> 
+          <script type="text/javascript" src="/z/a6.js"></script>
+          <div class="delfloat"></div>
+        </div>
+        <div class="f_270"></div>
+      </div>
+       
+  </div>
+  <div class="delfloat"></div>
+</div>
+<div class="delfloat"></div>
+<div class="m10" align="center">
+    <script type="text/javascript" src="http://down.admin5.com/z/footer_ad.js"></script> 
+</div>
+<div id="footermenu">
+  <div class="divcenter"><a href="http://down.admin5.com/data/about.html">��������</a><a href="http://down.admin5.com/data/Contact.html" rel="nofollow">��ϵ����</a><a href="http://down.admin5.com/data/fabu.html" rel="nofollow">������Դ</a><a href="http://down.admin5.com/data/ads.html" rel="nofollow">������</a><a href="http://down.admin5.com/data/Partner.html">�������</a><a href="http://down.admin5.com/data/sitemap.html">��վ��ͼ</a><a href="http://down.admin5.com/data/copyright.html">��Ȩ����</a><a href="http://down.admin5.com/data/Contact.html">�����ǶԻ�</a></div>
+</div>
+<div id="footer">
+<!--  <dl>
+    <dt>��Ŀ�Ƽ�</dt>
+    <dd><a href="http://down.admin5.com/asp/">ASPԴ��</a><A href="http://down.admin5.com/" target="_blank">��վԴ��</A><a href="http://down.admin5.com/asp/bbs/">ASP��̳Դ��</a><a href="http://down.admin5.com/asp/zhengzhan/">asp��վԴ��</a><a href="http://down.admin5.com/asp/qiye/">ASP��ҵ��վ</a></dd>
+    <dd><a href="http://down.admin5.com/php/">PHPԴ��</a> <a href="http://down.admin5.com/php/blog/">php����</a><a href="http://down.admin5.com/php/bbs/">php��̳Դ��</a><a href="http://down.admin5.com/php/cms/">CMSϵͳ</a> <a href="http://down.admin5.com/php/qiye/">PHP��ҵ��վ</a></dd>
+    <dd><a href="http://down.admin5.com/net/">.NetԴ��</a><a href="http://down.admin5.com/jsp/">JSPԴ��</a><a href="http://down.admin5.com/net/qiye/">.net��ҵ��վ</a><a href="http://down.admin5.com/moban/Discuz/">Discuzģ��</a><a href="http://down.admin5.com/moban/PHPWind/">PHPWindģ��</a></dd>
+    <dd><a href="http://down.admin5.com/moban/dongyi/">����ģ��</a><a href="http://down.admin5.com/moban/PHPCMS/">PHPCMSģ��</a> <a href="http://down.admin5.com/moban/shopex/">ShopEXģ��</a><a href="http://down.admin5.com/texiao/">��ҳ��Ч����</a><a href="http://down.admin5.com/texiao/ad/">JS������</a></dd>
+    <dd><a href='http://down.admin5.com/fuwuqi/'>���������</a> <a href='http://down.admin5.com/fuwuqi/web/'>WEB������</a> <a href='http://down.admin5.com/fuwuqi/ftp/'>FTP������</a> <a href='http://down.admin5.com/network/'>�������</a> <a href="http://down.admin5.com/network/zyzz/">��ҳ�������</a></dd>
+    <dd><a href="http://down.admin5.com/app/">Ӧ�����</a> <a href="http://down.admin5.com/app/yasuo/">��ѹ�����</a><A href="http://down.admin5.com/app/shuru/">�������뷨</A><A href="http://down.admin5.com/app/bangong/">�칫���</A><A href="http://down.admin5.com/safe/shadu/">ɱ�����</A></dd>
+    <dd> <a href="http://ziti.admin5.com/huawen/">��������</a> <a href="http://ziti.admin5.com/qq/">QQ����</a> <a href="http://ziti.admin5.com/wending/">�Ķ�����</a> <a href="http://ziti.admin5.com/weiruan/">΢������</a> <a href="http://ziti.admin5.com/jinmei/">��÷����</a></dd>
+    <dd> <a href="http://ziti.admin5.com/huakang/">��������</a> <a href="http://ziti.admin5.com/jingdian/">��������</a> <A href="http://sc.admin5.com/moban/qiye/">��ҵ��վģ��</A><A href="http://sc.admin5.com/shiliang/">ʸ���ز�</A> <a href="http://sc.admin5.com/flash/">Flash�ز�</a></dd>
+    <dd> <a href="http://sc.admin5.com/yinxiao/">��Ч�ز�</a> <a href="http://sc.admin5.com/tubiao/">ͼ������</a> <a href="http://sc.admin5.com/tubiao/wenjianjia/">�ļ���ͼ��</a> <a href="http://sc.admin5.com/biaoqing/">QQ��������</a> <a href="http://down.admin5.com/dll/">DLL�ļ�</a></dd>
+  </dl>
+  <div class="delfloat"></div>-->
+  <div  class="divcenter copy">
+    <div><span style="float:right;">��ֵ����ҵ��Ӫ���֤:��B2-20110049</span>CopyRight &#169; 2009-2012 Down.Admin5.Com <a href="http://down.admin5.com" title="��վԴ��">A5Դ��</a> �ṩ <a href="http://down.admin5.com" title="��վԴ��">��վԴ������</a> All Rights reserved.<br />
+      <span style="float:right;"><img src="/templets/images/pr.gif" width="80" height="15"></span>����<a href="http://down.admin5.com/php/7401.html" target="_blank">dedecms</a><script language="JavaScript" type="text/javascript" src="/z/footer_zanzhu.js"></script>
+    </div>
+  </div>
+</div>
+<span style="display:none;">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a4f0a30534107c4710afbec9c3f13382";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="http://s2.cnzz.com/stat.php?id=371885&web_id=371885" language="JavaScript" charset="gb2312"></script>
+</span> 
+<script type="text/javascript" id="bdshare_js" data="type=button&uid=360753" ></script> 
+<script type="text/javascript" id="bdshell_js"></script> 
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script> 
+<script src="/plus/count.php?aid=108784&mid=890" language="javascript"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+	var l = true;
+	var top = $("#xxkmenu1").offset().top;
+	function doFix()
+	{              
+		var scrolla=$(window).scrollTop();
+		var dis=parseInt(top)-parseInt( scrolla);
+		if(l && dis<=0)
+		{                
+			$("#xxkmenu1").removeClass().addClass("fixed_right");
+			l=false;
+		}
+		if(!l && dis>0)
+		{
+			$("#xxkmenu1").removeClass("fixed_right");
+			l=true;
+		}
+	}
+	$(window).scroll(doFix);
+});
+</script> 
+</body>
+</html>

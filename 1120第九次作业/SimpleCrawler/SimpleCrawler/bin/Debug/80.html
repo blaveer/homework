@@ -1,0 +1,384 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin) - ������� - A5Դ��</title>
+<meta name="keywords" content="��װ,php+Mysql+zend+phpmyadmin,��" />
+<meta name="description" content="ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin)���أ�zkeys�ٷ���Ȩ�׷����� ��ӭʹ��ZKEYSPHP��װϵͳ,����װ������ɫ����,��дϵͳ�ļ� MySql��root����ΪСдzkeys,�뼰ʱ�޸�,MySql���������ڰ�ȫ�˺�mysql_zkeys�� IIS��˿�Ϊ999����PHPMYADMINվ�� PHP5.2.17 ��DZ����̳����֧��PHP 5.3���ʲ��ø�Ϊ�ʺ�" />
+<meta http-equiv="mobile-agent" content="format=[xhtml];url=http://m.down.admin5.com/fuwuqi/ZkeysPHP.html">
+<link rel="alternate" media="only screen and(max-width: 640px)" href="http://m.down.admin5.com/fuwuqi/ZkeysPHP.html" >
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="/templets/css/public.css" rel="stylesheet" type="text/css" />
+<link href="/templets/css/content.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="/include/dedeajax2.js"></script>
+<script type="text/javascript" src="/data/js/xxk.js"></script>
+<!--<script language="javascript" type="text/javascript" src="/data/js/jquery.min.js"></script>-->
+<script language="javascript" type="text/javascript">
+<!--
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('���ղ��ѱ������ร�'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("���Ѿ���̬����"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+</head>
+<body>
+<div class="divcenter">
+  <div id="logo" class="dis"><a href="/"><img src="/images/logo.gif" width="141" height="60" alt="A5Դ��-��վԴ���վ����������վ" /></a></div>
+  <div id="top_ads" class="dis"> 
+    <script language="javascript" src="/z/a1.js"></script> 
+  </div>
+</div>
+<div class="delfloat"></div>
+<div id="menu" class="divcenter">
+  <ul id="menuul" class="f_left">
+    <li><a href="http://down.admin5.com/info/">��Ѷ</a></li>
+    <li><a href="http://down.admin5.com/">Դ��</a></li>
+    <li><a href="http://down.admin5.com/" class="f">���</a></li>
+    <li><a href="http://ziti.admin5.com/">����</a></li>
+    <script type="text/javascript" src="/z/ad-daohang.js"></script>
+  </ul>
+  <div> 
+    <script type="text/javascript" src="/data/js/daohang.js"></script> 
+  </div>
+</div>
+<div class="delfloat"></div>
+<div id="searchdiv" class="divcenter">
+  <div class="searchdiv_menu"><a href="http://down.admin5.com/fuwuqi/">���������</a>
+  <a href="http://down.admin5.com/network/">�������</a>
+  <a href="http://down.admin5.com/app/">Ӧ�����</a>
+  <a href="http://down.admin5.com/sys/">ϵͳ����</a>
+  <a href="http://down.admin5.com/tuxiang/">ͼ��ͼ��</a>
+  <a href="http://down.admin5.com/media/">��ý��</a>
+  <a href="http://down.admin5.com/safe/">ɱ����ȫ</a>
+  <a href="http://down.admin5.com/youxi/">��Ϸ</a>
+  <a href="http://down.admin5.com/dll/" style="background:none;">DLL�ļ�</a></div>
+  <form action="/plus/search.php" name="formsearch" target="_blank">
+  <div class="seacdiv_form dis">
+    <input name="keyword" type="text" id="search-keyword" />
+  </div>
+  <div class="seacdiv_form dis">
+    <select name='typeid' style="height:22px; line-height:22px;">
+      <option value='0' selected>������Ŀ</option>
+      <option value='870'>��վԴ��</option>
+      <option value='646'>Դ����</option>
+      <option value='378'>Դ��ģ��</option>
+      <option value='871'>�������</option>
+      <option value='840'>�鼮�̳�</option>
+    </select>
+    <input type="hidden" name="searchtype" value="title">
+    <input type="hidden" name="kwtype" value="0">
+  </div>
+  <div class="seacdiv_form dis">
+    <input type="image" class="search_but" src="/templets/images/searchbut.gif" />
+  </div>
+  </form>
+  <div class="seacdiv_form gjsearch dis"><a href="/plus/heightsearch.php">�߼�����</a></div>
+  <div class="seacdiv_form dis">�ؼ��֣�<a href="http://down.admin5.com/plus/search.php?keyword=Discuz&typeid=870&searchtype=title&kwtype=0" rel="nofollow">Discuz��</a>&#160;&#160;<a href="http://down.admin5.com/plus/search.php?keyword=Axure&typeid=871&searchtype=title&kwtype=0" rel="nofollow">Axure</a>&#160;&#160;<a href="http://down.admin5.com/plus/search.php?keyword=%CD%C5%B9%BA&typeid=870&searchtype=title&kwtype=0&x=42&y=3" rel="nofollow">�Ź�ϵͳ</a></div>
+  <div class="search_fb dis"><span><a href="/plus/list.php?tid=409" style="color:#2e3092;">���¸���</a></span><span><a href="http://down.admin5.com/member/index.php" rel="nofollow"><B>������Դ</B></a></span><span><a href="/data/Contact.html" style="color:#2e3092;" rel="nofollow">�Ὠ��</a></span><span><a title="�����´�ʹ�� ����" href="#" onClick="window.external.AddFavorite('http://down.admin5.com/', 'A5Դ�� - ��վԴ���վ����������վ'); return false;" style="color:#2e3092;">�ղر�վ</a></span></div>
+</div>
+<div class="divcenter"><img src="/templets/images/search_foot.gif" width="980" alt="��վԴ������" height="2" /></div>
+
+<div id="a22"> 
+  <script type="text/javascript" src="/z/a2aa.js"></script>
+  <div class="delfloat"></div>
+</div>
+<div id="a3"> 
+  <script type="text/javascript" src="/z/a3.js"></script> 
+</div>
+<div class="divcenter path"><script type="text/javascript" src="/data/js/daohang2.js"></script> 
+  <span>��ǰλ�ã�</span><a href='http://down.admin5.com/'>A5Դ��</a> >  <a href='/soft/'>�������</a> >  <a href='/fuwuqi/'>���������</a> >  <a href='/fuwuqi/WEB/'>WEB������</a> >  <strong><a href="/fuwuqi/ZkeysPHP.html">ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin)</a></strong></div>
+<div class="divcenter">
+  <div class="conleft f_left">
+    <div class="d_con700"></div>
+    <div class="b_con700 dhbg">
+      <h1>ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin)</h1>
+      <div class="soft_info f_left">
+        <ul>
+          <li class="long">��Դ���ӣ�<span>[ <a href="#link" title="ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin)���ص�ַ">���ص�ַ</a> ]&#160;&#160;[ <a href="#Comment"  title="���ۻ򱨴�ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin)">���۱���</a> ]</span></li>
+          <li>��Ȩ��ʽ��<span>������</span></li>
+          <li>�������ԣ�<span>��������</span></li>
+          <li>�ļ���С��<span>25.4 MB</span></li>
+          <li>����ʱ�䣺<span>2012-02-16</span></li>
+          <li>��Դ���ͣ�<span>�������</span></li>
+          <li>�Ƽ��ȼ���<span>������</span></li>
+          <li class="long">ƽ̨������<span>2000/2003</span></li>
+          <li>������ҳ��<span><a href="http://www.zkeys.com/" target="_blank">����鿴</a></span></li>
+          <li>��ʾ��ַ��<span><a href="http://" target="_blank">����鿴</a></span></li>
+        </ul>
+        <div class="delfloat"></div>
+        <div class="conads1"> 
+          <script type="text/javascript" src="http://down.admin5.com/z/c1.js"></script> 
+        </div>
+      </div>
+      <div class="conads2 f_left"> 
+        <script type="text/javascript" src="http://down.admin5.com/z/c2.js"></script> 
+      </div>
+      <div class="delfloat"></div>
+      <div class="con_title">��ϸ���� - [ ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin) ] </div>
+      <div class="con_text"> <p>zkeys�ٷ���Ȩ�׷�����</p>
+<!--StartFragment -->
+<div>��ӭʹ��ZKEYS&nbsp;PHP��װϵͳ,����װ������ɫ����,��дϵͳ�ļ�<br />
+MySql��root����ΪСдzkeys,�뼰ʱ�޸�,MySql���������ڰ�ȫ�˺�mysql_zkeys��<br />
+IIS��˿�Ϊ999����PHPMYADMINվ��<br />
+PHP&nbsp;5.2.17 ��DZ����̳����֧��PHP 5.3���ʲ��ø�Ϊ�ʺ���������ʹ�õ�PHP 5.2��<br />
+ZEND&nbsp;3.3.3<br />
+MYSQL&nbsp;5.1.57<br />
+PHPMYADMIN&nbsp;3.3.10</div>
+<div>ͬʱ֧��Win2003 32λ�棬Win2008��win2008r2<br />
+2011.05.19</div>
+<div>������ж��ģ��<br />
+<span style="color: #ff0000"><strong>A5������ʾ������zkeysphp�ٷ�ȷ�ϣ���ϵͳ������Ŀ¼Ȩ�ޣ�360�ͽ�ɽɱ�������ʱ��ľ�������ɱ����������������ʹ�á�</strong></span></div>
+<div>&nbsp;</div><a name="link"></a> 
+        <script type="text/javascript" src="http://down.admin5.com/z/c5.js"></script> 
+      </div>
+    </div>
+    <div class="f_con700"></div>
+    <div class="d_700 m10 title">���ص�ַ - [ ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin) ]</div>
+    <div class="b_con700 dhbg">
+      <ul class="down-anniu">
+        <li><a href="http://110.85.5.26:89/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow"> �Ϻ��������ص㣨������</a></li><li><a href="http://110.85.5.26:89/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow">3A�������ص㣨����</a></li><li><a href="http://110.85.5.26:89/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow"> �й��������ص㣨����</a></li><li><a href="http://175.6.244.211:88/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow"> ��Ѷ�������ص㣨����</a></li><li><a href="http://175.6.244.211:88/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow"> ���ӿƼ����ص㣨����</a></li><li><a href="http://175.6.244.211:88/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow"> �˶��������ص㣨����</a></li><li><a href="http://downadmin5-112.xzcheng.com/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow"> ��ҳ�������ص㣨����</a></li><li><a href="http://downadmin5-112.xzcheng.com/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow">�����������ص㣨����</a></li><li><a href="http://downadmin5-112.xzcheng.com/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow"> ֪�������ص㣨����</a></li><li><a href="http://downadmin5-112.xzcheng.com/soft2/201201/zkeysphp.rar" name="ww"  target="_blank"  rel="nofollow"> ���������ص㣨����</a></li> 
+        <!-- Baidu Button BEGIN -->
+        <div id="bdshare" class="bdshare_b" style="line-height: 12px; margin-top:3px;"> <img src="http://bdimg.share.baidu.com/static/images/type-button-2.jpg?cdnversion=20120831" /> </div>
+        <!-- Baidu Button END -->
+      </ul>
+      <script language="JavaScript" type="text/javascript" src="http://down.admin5.com/z/c3.js"></script>
+      <div class="delfloat"></div>
+      <script src="http://down.admin5.com/z/f0.js"></script>
+      <div>
+        <dl class="con_att_r m10">
+          <dt>������</dt>
+		  
+          <dd><span>03-07</span><a href='/fuwuqi/DedeAMPZ.html'>DedeAMPZ_php����һ����װ��</a></dd>
+<dd><span>07-25</span><a href='/fuwuqi/iis7.html'>iis7����(΢��Web���������IIS7.0������</a></dd>
+<dd><span>11-23</span><a href='/fuwuqi/96385.html'>������PHP�׼����ϰ�</a></dd>
+<dd><span>05-16</span><a href='/fuwuqi/JanaServer.html'>Jana Server v2.5.0.111</a></dd>
+
+        </dl>
+        <dl class="con_att m10">
+          <dt>����˵��</dt>
+          <dd>�Ƽ�ʹ��<a href="http://down.admin5.com/network/xunlei-jisu.html" class="cblue" target="_blank">Ѹ��</a>��<a href="http://down.admin5.com/network/qqxuanfeng.html" class="cblue" target="_blank">QQ����</a>���أ���ʹ��<a href="http://down.admin5.com/app/winrar.html" class="cblue" target="_blank">WINRAR</a>��ѹ�ļ���</dd>
+          <dd>���ر�վ��Դ����������ݲ����������һ��ʱ�����ԣ�</dd>
+          <dd>��վ��Դͨ�� <a href="http://down.admin5.com/safe/QQdiannaoguanjia.html" target="_blank" class="cblue">QQ���Թܼ�</a>��<a href="http://down.admin5.com/safe/360weishi.html" target="_blank" class="cblue">360��ȫ��ʿ</a> �������⣻</dd>
+          <dd>��վ������Դ��ѧϰ����ʹ�ã�����ҵ��;���빺���档</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="f_con700"></div>
+    <div class="d_700 m10 title">���Ѷԡ�ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin)��������</div>
+    <div class="b_700 dhbg"> <!--PC��-->
+<div style="padding:0 10px;">
+<div id="SOHUCS" sid="80174"></div>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+window.changyan.api.config({
+appid: 'cysWJCWgI',
+conf: 'prod_d2c82f3655155fc5e4355be90a06a366'
+});
+</script>
+</div>
+      <div class="pldiv plhistory"><a href="#" style=" float:right;">���ض���</a>��һƪ��<a href='/fuwuqi/79482.html'>Go-Global For Windows ��Ȩ���� v4.01</a>  &nbsp; ��һƪ��<a href='/fuwuqi/kangleweb.html'>kangle web������ v3.4.1 �ȶ���</a> </div>
+    </div>
+    <div class="f_700"></div>
+  </div>
+  <div class="conright f_left">
+      <div class="d_270 title">��ϲ��������ô��</div>
+      <div class="b_270_2 dhbg">
+        <div id="newdigg">
+          <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',80174)">
+            <div class="digg_act">��</div>
+            <div class="digg_num">(0)</div>
+            <div class="digg_percent">
+              <div class="digg_percent_bar"><span style="width:0%"></span></div>
+              <div class="digg_percent_num">0%</div>
+            </div>
+          </div>
+          <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',80174)">
+            <div class="digg_act">��</div>
+
+            <div class="digg_num">(0)</div>
+            <div class="digg_percent">
+              <div class="digg_percent_bar"><span style="width:0%"></span></div>
+              <div class="digg_percent_num">0%</div>
+            </div>
+          </div>
+        </div>
+        <script language="javascript" type="text/javascript">getDigg(80174);</script>
+        <div class="delfloat"></div>
+        <span  class="digg_xiazai">[ <a  href="#link" title="���ء�ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin)��">���ص�ַ</a> ]</span><span class="digg_pinglun">[ <a  href="#Comment" title="���ۡ�ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin)��">�����²�</a> ]</span> </div>
+      <div class="f_270"></div>
+	  <div class="d_270 title m10">�����������</div>
+    <div class="b_270 dhbg">
+      <ul>
+        <li><img src="/templets/images/ico/1.gif"><a target='_blank' href='/fuwuqi/ZkeysPHP.html'>ZkeysPHP��װϵͳ(�Զ���װphp+Mysql+zend+phpmyadmin)</a> </li>
+<li><img src="/templets/images/ico/2.gif"><a target='_blank' href='/fuwuqi/IIS6.0.html'>IIS6.0���أ�IIS6.0������װ����</a> </li>
+<li><img src="/templets/images/ico/3.gif"><a target='_blank' href='/fuwuqi/Apache_Windows.html'>Apache v2.4.10 for Windows</a> </li>
+<li><img src="/templets/images/ico/4.gif"><a target='_blank' href='/fuwuqi/102258.html'>��׿����ANMPP���ɻ��� v8.0 special2</a> </li>
+<li><img src="/templets/images/ico/5.gif"><a target='_blank' href='/fuwuqi/DedeAMPZ.html'>DedeAMPZ_php����һ����װ��</a> </li>
+<li><img src="/templets/images/ico/6.gif"><a target='_blank' href='/fuwuqi/kangleweb.html'>kangle web������ v3.4.1 �ȶ���</a> </li>
+<li><img src="/templets/images/ico/7.gif"><a target='_blank' href='/fuwuqi/PHP_Windows.html'>PHP v5.5.3 For Windows</a> </li>
+<li><img src="/templets/images/ico/8.gif"><a target='_blank' href='/fuwuqi/iis7.html'>iis7����(΢��Web���������IIS7.0������װ��) v7.0</a> </li>
+<li><img src="/templets/images/ico/9.gif"><a target='_blank' href='/fuwuqi/AspWebServer.html'>Ajiu AspWebServer��asp��������ɫ�棩 v3.2</a> </li>
+<li><img src="/templets/images/ico/10.gif"><a target='_blank' href='/fuwuqi/88707.html'>��������PHP+MYSQLһ����װϵͳ for windows2003</a> </li>
+<li><img src="/templets/images/ico/11.gif"><a target='_blank' href='/fuwuqi/safedogiis.html'>��վ��ȫ��IIS�� v4.0.18081</a> </li>
+<li><img src="/templets/images/ico/12.gif"><a target='_blank' href='/fuwuqi/nginx_windows.html'>nginx for Windows v1.13.4 ������</a> </li>
+
+      </ul>
+      <div class="delfloat"></div>
+    </div>
+    <div class="f_270"></div>
+	  <script type="text/javascript" src="/z/c8.js"></script>
+      <div class="homeleft f_left" id="xxkmenu1">
+        <ul class="d_270 newxxk m10">
+          <li class="f" onMouseOver="Tab1(0)">Դ���Ƽ�</li>
+          <li  onMouseOver="Tab1(1)">����Ƽ�</li>
+        </ul>
+        <div class="delfloat"></div>
+        <div class="dhbg" id="xxkbody1"> 
+          <script type="text/javascript" src="/z/a6.js"></script>
+          <div class="delfloat"></div>
+        </div>
+        <div class="f_270"></div>
+      </div>
+       
+  </div>
+  <div class="delfloat"></div>
+</div>
+<div class="delfloat"></div>
+<div class="m10" align="center">
+    <script type="text/javascript" src="http://down.admin5.com/z/footer_ad.js"></script> 
+</div>
+<div id="footermenu">
+  <div class="divcenter"><a href="http://down.admin5.com/data/about.html">��������</a><a href="http://down.admin5.com/data/Contact.html" rel="nofollow">��ϵ����</a><a href="http://down.admin5.com/data/fabu.html" rel="nofollow">������Դ</a><a href="http://down.admin5.com/data/ads.html" rel="nofollow">������</a><a href="http://down.admin5.com/data/Partner.html">�������</a><a href="http://down.admin5.com/data/sitemap.html">��վ��ͼ</a><a href="http://down.admin5.com/data/copyright.html">��Ȩ����</a><a href="http://down.admin5.com/data/Contact.html">�����ǶԻ�</a></div>
+</div>
+<div id="footer">
+<!--  <dl>
+    <dt>��Ŀ�Ƽ�</dt>
+    <dd><a href="http://down.admin5.com/asp/">ASPԴ��</a><A href="http://down.admin5.com/" target="_blank">��վԴ��</A><a href="http://down.admin5.com/asp/bbs/">ASP��̳Դ��</a><a href="http://down.admin5.com/asp/zhengzhan/">asp��վԴ��</a><a href="http://down.admin5.com/asp/qiye/">ASP��ҵ��վ</a></dd>
+    <dd><a href="http://down.admin5.com/php/">PHPԴ��</a> <a href="http://down.admin5.com/php/blog/">php����</a><a href="http://down.admin5.com/php/bbs/">php��̳Դ��</a><a href="http://down.admin5.com/php/cms/">CMSϵͳ</a> <a href="http://down.admin5.com/php/qiye/">PHP��ҵ��վ</a></dd>
+    <dd><a href="http://down.admin5.com/net/">.NetԴ��</a><a href="http://down.admin5.com/jsp/">JSPԴ��</a><a href="http://down.admin5.com/net/qiye/">.net��ҵ��վ</a><a href="http://down.admin5.com/moban/Discuz/">Discuzģ��</a><a href="http://down.admin5.com/moban/PHPWind/">PHPWindģ��</a></dd>
+    <dd><a href="http://down.admin5.com/moban/dongyi/">����ģ��</a><a href="http://down.admin5.com/moban/PHPCMS/">PHPCMSģ��</a> <a href="http://down.admin5.com/moban/shopex/">ShopEXģ��</a><a href="http://down.admin5.com/texiao/">��ҳ��Ч����</a><a href="http://down.admin5.com/texiao/ad/">JS������</a></dd>
+    <dd><a href='http://down.admin5.com/fuwuqi/'>���������</a> <a href='http://down.admin5.com/fuwuqi/web/'>WEB������</a> <a href='http://down.admin5.com/fuwuqi/ftp/'>FTP������</a> <a href='http://down.admin5.com/network/'>�������</a> <a href="http://down.admin5.com/network/zyzz/">��ҳ�������</a></dd>
+    <dd><a href="http://down.admin5.com/app/">Ӧ�����</a> <a href="http://down.admin5.com/app/yasuo/">��ѹ�����</a><A href="http://down.admin5.com/app/shuru/">�������뷨</A><A href="http://down.admin5.com/app/bangong/">�칫���</A><A href="http://down.admin5.com/safe/shadu/">ɱ�����</A></dd>
+    <dd> <a href="http://ziti.admin5.com/huawen/">��������</a> <a href="http://ziti.admin5.com/qq/">QQ����</a> <a href="http://ziti.admin5.com/wending/">�Ķ�����</a> <a href="http://ziti.admin5.com/weiruan/">΢������</a> <a href="http://ziti.admin5.com/jinmei/">��÷����</a></dd>
+    <dd> <a href="http://ziti.admin5.com/huakang/">��������</a> <a href="http://ziti.admin5.com/jingdian/">��������</a> <A href="http://sc.admin5.com/moban/qiye/">��ҵ��վģ��</A><A href="http://sc.admin5.com/shiliang/">ʸ���ز�</A> <a href="http://sc.admin5.com/flash/">Flash�ز�</a></dd>
+    <dd> <a href="http://sc.admin5.com/yinxiao/">��Ч�ز�</a> <a href="http://sc.admin5.com/tubiao/">ͼ������</a> <a href="http://sc.admin5.com/tubiao/wenjianjia/">�ļ���ͼ��</a> <a href="http://sc.admin5.com/biaoqing/">QQ��������</a> <a href="http://down.admin5.com/dll/">DLL�ļ�</a></dd>
+  </dl>
+  <div class="delfloat"></div>-->
+  <div  class="divcenter copy">
+    <div><span style="float:right;">��ֵ����ҵ��Ӫ���֤:��B2-20110049</span>CopyRight &#169; 2009-2012 Down.Admin5.Com <a href="http://down.admin5.com" title="��վԴ��">A5Դ��</a> �ṩ <a href="http://down.admin5.com" title="��վԴ��">��վԴ������</a> All Rights reserved.<br />
+      <span style="float:right;"><img src="/templets/images/pr.gif" width="80" height="15"></span>����<a href="http://down.admin5.com/php/7401.html" target="_blank">dedecms</a><script language="JavaScript" type="text/javascript" src="/z/footer_zanzhu.js"></script>
+    </div>
+  </div>
+</div>
+<span style="display:none;">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a4f0a30534107c4710afbec9c3f13382";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="http://s2.cnzz.com/stat.php?id=371885&web_id=371885" language="JavaScript" charset="gb2312"></script>
+</span> 
+<script type="text/javascript" id="bdshare_js" data="type=button&uid=360753" ></script> 
+<script type="text/javascript" id="bdshell_js"></script> 
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script> 
+<script src="/plus/count.php?aid=80174&mid=0" language="javascript"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+	var l = true;
+	var top = $("#xxkmenu1").offset().top;
+	function doFix()
+	{              
+		var scrolla=$(window).scrollTop();
+		var dis=parseInt(top)-parseInt( scrolla);
+		if(l && dis<=0)
+		{                
+			$("#xxkmenu1").removeClass().addClass("fixed_right");
+			l=false;
+		}
+		if(!l && dis>0)
+		{
+			$("#xxkmenu1").removeClass("fixed_right");
+			l=true;
+		}
+	}
+	$(window).scroll(doFix);
+});
+</script> 
+</body>
+</html>
