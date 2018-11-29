@@ -1,0 +1,16 @@
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\obj\Debug\OrderDatabase.csprojResolveAssemblyReference.cache
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\obj\Debug\OrderDatabase.csproj.CoreCompileInputs.cache
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\OrderDatabase.exe.config
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\OrderDatabase.exe
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\OrderDatabase.pdb
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\EntityFramework.dll
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\EntityFramework.SqlServer.dll
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\Google.Protobuf.dll
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\MySql.Data.dll
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\EntityFramework.xml
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\EntityFramework.SqlServer.xml
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\Google.Protobuf.xml
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\bin\Debug\MySql.Data.xml
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\obj\Debug\OrderDatabase.csproj.CopyComplete
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\obj\Debug\OrderDatabase.exe
+E:\vs date\C#\homework\1125第十次作业\OrderDatabase\OrderDatabase\OrderDatabase\obj\Debug\OrderDatabase.pdb
